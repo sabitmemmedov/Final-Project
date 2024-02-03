@@ -16,16 +16,209 @@
 </head>
 
 <body>
-<header>
-    <h1>salam</h1>
-</header>
+    <header>
+        <div class="container-xl">
+
+            <nav class="navbar navbar-expand-lg bg-body-transpalent">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="./assets/img/logo_homepage_2.png" alt=""></a>
+                    <button class="navbar-toggler burger-menu" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars bars-icon"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./shop.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./news.html">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./blog.html">Blog</a>
+                            </li>
+
+                        </ul>
+                        <span class="navbar-text">
+                            <div class="icons-div">
+                                <div class="iconDiv">
+                                    <a href="./login.html">
+                                        <i class="fa-regular fa-user"></i>
+                                    </a>
+                                </div>
+                                <div class="iconDiv">
+                                    <a href="./wish.html">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </a>
+                                    <span>0</span>
+                                </div>
+                                <div class="iconDiv">
+                                    <a href="./basket.html">
+                                        <i class="fa-solid fa-bag-shopping"></i>
+                                    </a>
+                                    <span>2</span>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="section-hero">
+            <div class="hero-content">
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="6000">
+                            <div class="carusel-img img-one">
+                                <div class="carusel-img-liner">
+                                    <div class="carusel-item-one-content">
+                                        <h2>Xbox Game Pass</h2>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magnam
+                                            itaque error beatae aliquid reiciendis? Ipsa?</p>
+                                        <button>Shop Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="6000">
+                            <div class="carusel-img img-two">
+                                <div class="carusel-img-liner">
+                                    <div class="container-xl">
+                                        <div class="carusel-item-two-content">
+                                            <h2>League of Legends</h2>
+                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magnam
+                                                itaque error beatae aliquid reiciendis? Ipsa?</p>
+                                            <button>Shop Now</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item " data-bs-interval="6000">
+                            <div class="carusel-img img-three">
+                                <div class="carusel-img-liner">
+                                    <div class="container-xl">
+                                        <div class="carusel-item-three-content">
+                                            <h2>The Witcher 3:Wild Hunt</h2>
+                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, magnam
+                                                itaque error beatae aliquid reiciendis? Ipsa?</p>
+                                            <button>Shop Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="section-featured">
+            <div class="container-xl">
+                <div class="section-featured-content">
+                    <div class="section-featured-head-content">
+                        <div class="featured-title">
+                            <h4>Featured Games</h4>
+                        </div>
+                        <div class="catogory-filters">
+                            <ul>
+                                <li id="defaultFilter" class="filter-item active" onclick="changeFilter(this,'All')">
+                                    <h4>All</h4>
+                                </li>
+                                <li class="filter-item" onclick="changeFilter(this, 'Xbox')">
+                                    <h4>Xbox</h4>
+                                </li>
+                                <li class="filter-item" onclick="changeFilter(this, 'Playstation')">
+                                    <h4>Playstation</h4>
+                                </li>
+                                <li class="filter-item" onclick="changeFilter(this , 'PC')">
+                                    <h4>PC</h4>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section-featured-carousel">
+
+                        <div class="wrapper">
+                            <i id="left" class="fa-solid fa-angle-left i"></i>
+                            <ul id="sec-two-cards" class="carousell">
+                                <li class="sec-two-card">
+                                    <div class="imgBox">
+                                        <img src="./assets/img/game_image_6-300x450.jpg" alt="">
+                                    </div>
+                                    <div class="textBox">
+                                        <h4>
+                                            Gears of War 5
+                                        </h4>
+                                        <span>$79.00</span>
+                                    </div>
+                                    <div class="iconsBox">
+                                        <i class="fa-solid fa-star active"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="btnsBox">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button style="border-bottom-left-radius: 8px;"><i
+                                                        class="fa-solid fa-cart-arrow-down"></i></button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button style="border-bottom-right-radius: 8px;"><i
+                                                        class="fa-regular fa-heart"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <i id="right" class="fa-solid fa-angle-right i"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
 
 
 
+    <!-- cart -->
 
+
+    <div class="slide-cart">
+
+    </div>
+
+    <!-- cart -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
+        integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/home.js"></script>
 </body>
 
 </html>
