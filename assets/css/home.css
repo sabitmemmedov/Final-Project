@@ -192,9 +192,11 @@ header .navbar-text .icons-div .iconDiv span {
   background-color: #00080F;
 }
 #section-featured .section-featured-content .section-featured-head-content {
+  padding: 40px 0;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: start;
+  gap: 20px;
 }
 #section-featured .section-featured-content .section-featured-head-content .featured-title h4 {
   font-size: 26px;
@@ -203,14 +205,12 @@ header .navbar-text .icons-div .iconDiv span {
   padding: 0;
   margin: 0;
 }
-#section-featured .section-featured-content .section-featured-head-content .catogory-filters {
-  padding: 40px 0;
-}
 #section-featured .section-featured-content .section-featured-head-content .catogory-filters ul {
   display: flex;
   margin: 0;
   padding: 0;
   gap: 30px;
+  flex-wrap: wrap;
 }
 #section-featured .section-featured-content .section-featured-head-content .catogory-filters ul li {
   color: #90989F;
@@ -254,17 +254,17 @@ header .navbar-text .icons-div .iconDiv span {
   transform: translateY(-50%) scale(0.85);
 }
 #section-featured .section-featured-content .section-featured-carousel .wrapper .i:first-child {
-  left: -22px;
+  left: -12px;
 }
 #section-featured .section-featured-content .section-featured-carousel .wrapper .i:last-child {
-  right: -22px;
+  right: -12px;
 }
 #section-featured .section-featured-content .section-featured-carousel .wrapper .carousell {
   padding: 0;
   margin: 0;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc(25% - 8px);
+  grid-auto-columns: calc(25% - 12px);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 16px;
@@ -291,14 +291,19 @@ header .navbar-text .icons-div .iconDiv span {
   position: relative;
   background-color: #182028 !important;
   padding: 0px !important;
+  border-radius: 4px;
+  overflow: hidden;
 }
 #section-featured .section-featured-content .section-featured-carousel .sec-two-card .imgBox {
   width: 100% !important;
+  border: 4px solid #182028 !important;
+  border-radius: 4px;
 }
 #section-featured .section-featured-content .section-featured-carousel .sec-two-card .imgBox img {
   width: 100%;
   border-radius: 3px;
   object-fit: cover;
+  height: 400px;
 }
 #section-featured .section-featured-content .section-featured-carousel .sec-two-card .textBox {
   display: flex;
@@ -338,7 +343,7 @@ header .navbar-text .icons-div .iconDiv span {
   z-index: 5;
   bottom: -4px;
   position: absolute;
-  width: 102%;
+  width: 100%;
   background-color: #081018;
   display: none;
 }
@@ -362,6 +367,36 @@ header .navbar-text .icons-div .iconDiv span {
 #section-featured .section-featured-content .section-featured-carousel .sec-two-card .btnsBox .row .col-6 button:hover {
   background-color: #7a2508;
 }
+#section-featured .section-featured-content .section-featured-carousel .sec-two-card .topBtnsBoxx {
+  width: 100%;
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#section-featured .section-featured-content .section-featured-carousel .sec-two-card .topBtnsBoxx .hotSpanDiv {
+  display: flex;
+  justify-items: end !important;
+}
+#section-featured .section-featured-content .section-featured-carousel .sec-two-card .topBtnsBoxx div {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+#section-featured .section-featured-content .section-featured-carousel .sec-two-card .topBtnsBoxx div span {
+  background-color: #E0232D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  padding: 0;
+  padding: 12px 8px;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 14px;
+}
 #section-featured .section-featured-content .section-featured-carousel .sec-two-card:hover .btnsBox {
   transition: 1s;
   display: block;
@@ -369,8 +404,8 @@ header .navbar-text .icons-div .iconDiv span {
 }
 #section-featured .section-featured-content .section-featured-carousel .carousell :where(.sec-two-card, .img) {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
 }
 #section-featured .section-featured-content .section-featured-carousel .carousell .sec-two-card {
   scroll-snap-align: start;
@@ -380,7 +415,6 @@ header .navbar-text .icons-div .iconDiv span {
   cursor: pointer;
   padding-bottom: 15px;
   flex-direction: column;
-  border: 4px solid #182028 !important;
   border-radius: 8px;
 }
 @media screen and (max-width: 900px) {
@@ -391,5 +425,219 @@ header .navbar-text .icons-div .iconDiv span {
 @media screen and (max-width: 600px) {
   #section-featured .section-featured-content .section-featured-carousel .wrapper .carousell {
     grid-auto-columns: 100%;
+  }
+}
+
+#custom-featured-section {
+  padding: 40px 0;
+  background-color: #00080F;
+}
+#custom-featured-section .custom-featured-content {
+  padding: 40px 0;
+}
+#custom-featured-section .custom-featured-content .custom-featured-title {
+  padding: 40px 0;
+}
+#custom-featured-section .custom-featured-content .custom-featured-title h4 {
+  font-size: 26px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+#custom-featured-section .custom-featured-carousel {
+  width: 100%;
+  position: relative;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper {
+  width: 100%;
+  position: relative;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-i {
+  z-index: 10;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: rgba(205, 62, 15, 0.4470588235);
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+  color: #fff;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper #custom-left {
+  left: -12px;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper #custom-right {
+  right: -12px;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(50% - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell.no-transition {
+  scroll-behavior: auto;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell.dragging .custom-sec-two-card {
+  cursor: grab;
+  user-select: none;
+  padding: 0 !important;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell::-webkit-scrollbar {
+  display: none;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card {
+  background-color: #182028 !important;
+  scroll-snap-align: start;
+  height: auto;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  border: 4px solid #182028 !important;
+  border-radius: 8px;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .imgBox {
+  position: relative;
+  width: 300px !important;
+  border-radius: 10px;
+  background-color: #182028 !important;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .imgBox img {
+  width: 100%;
+  border-radius: 10px;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .imgBox .imgBoxIcons {
+  padding: 10px 5px;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .imgBox .imgBoxIcons span {
+  padding: 0 !important;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #CD3D0F;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .textDiv {
+  background-color: #182028;
+  padding-top: 40px;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .textDiv h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  padding-bottom: 10px;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .iconsBox {
+  display: flex;
+  gap: 1px;
+  padding-bottom: 20px;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .iconsBox i {
+  font-size: 14px;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .iconsBox .active {
+  color: #FEBF00;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .priceDiv {
+  padding-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  color: #CD3D0F;
+  font-size: 18px;
+  font-weight: 500;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .priceDiv .activee {
+  color: gray;
+  text-decoration: line-through;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .description {
+  max-width: 700px;
+  color: #BEC6CD;
+  min-height: 100px;
+  max-height: 120px;
+  overflow: hidden;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .btnsDiv {
+  padding-bottom: 40px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .btnsDiv button {
+  border: 0;
+  outline: 0;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .btnsDiv .addBasket {
+  background-color: #CD3D0F;
+  color: #fff;
+  width: 140px;
+  height: 42px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .btnsDiv .addBasket:hover {
+  background-color: #a8320b;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .btnsDiv .addWish {
+  height: 42px;
+  width: 42px;
+  background-color: transparent;
+  border: 1px solid #90989F;
+  color: #90989F;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .btnsDiv .addWish i {
+  font-size: 18px;
+}
+#custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .btnsDiv .addWish:hover {
+  background-color: #CD3D0F;
+  border: 1px solid #CD3D0F;
+  color: #fff;
+}
+@media screen and (max-width: 1200px) {
+  #custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell {
+    grid-auto-columns: 100%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .description {
+    display: none;
   }
 }

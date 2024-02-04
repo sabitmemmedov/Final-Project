@@ -106,11 +106,13 @@ window.onload = () => {
   changeFilter(document.getElementById("defaultFilter"), 'All')
 }
 function filtering(data, ctg, secTwoCards = document.getElementById("sec-two-cards")) {
-  let filter
+  
   secTwoCards.innerHTML = ""
-  filter = data.filter(item => ctg.includes("All") ? item : item.platform === ctg)
+  let filter = data.filter(item => ctg.includes("All") && item.hot ? item : item.platform === ctg && item.hot)
 
   filter.forEach(item => {
+    let topBtns = document.querySelectorAll('disDiv')
+    console.log(topBtns);
     secTwoCards.innerHTML += `
     <li class="sec-two-card">
     <div class="imgBox">
@@ -120,7 +122,9 @@ function filtering(data, ctg, secTwoCards = document.getElementById("sec-two-car
         <h4>
             ${item.name}
         </h4>
-        <span>$${item.price}.00 </span>
+        <div>
+          ${item.discount === ""?`<span>$${item.price.toFixed(2)} </span> `:`<span>$${ (item.price*(1- Number(item.discount)/100)).toFixed(2)} </span><span style='color:gray !important;text-decoration: line-through;'>$${item.price.toFixed(2)} </span> `} 
+        </div>
     </div>
     <div class="iconsBox">
         <i class="fa-solid fa-star active"></i><i class="fa-solid fa-star"></i><i
@@ -139,12 +143,106 @@ function filtering(data, ctg, secTwoCards = document.getElementById("sec-two-car
             </div>
         </div>
     </div>
+
+    <div  class="topBtnsBoxx" style="${item.discount === ""? 'justify-content:end;':'justify-content: space-between;'}">
+    ${item.discount === ""? "": `<div class="disDiv"> <span class="discountSpan">- ${item.discount}%</span> </div> `}
+    ${item.hot ?"<div class='hotSpanDiv'> <span class='hotSpan'>HOT</span> </div>": ""}
+  </div>
   </li>
 
     `
   })
 }
 ////////////////////////////////////////////////////////////////
+
+///////  section 3  carusel 
+
+
+// Custom Carousellllllllllllll
+const customWrapper = document.querySelector(".custom-wrapper");
+const customCarousel = document.querySelector(".custom-carousell");
+const customFirstCardWidth = customCarousel.querySelector(".custom-sec-two-card").offsetWidth;
+const customArrowBtns = document.querySelectorAll(".custom-wrapper i");
+const customCarouselChildrens = [...customCarousel.children];
+
+let customIsDragging = false, customStartX, customStartScrollLeft, customTimeoutId;
+
+// Get the number of cards that can fit in the carousel at once
+let customCardPerView = Math.round(customCarousel.offsetWidth / customFirstCardWidth);
+
+// Insert copies of the last few cards to beginning of carousel for infinite scrolling
+customCarouselChildrens.slice(-customCardPerView).reverse().forEach(card => {
+  customCarousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+});
+
+// Insert copies of the first few cards to end of carousel for infinite scrolling
+customCarouselChildrens.slice(0, customCardPerView).forEach(card => {
+  customCarousel.insertAdjacentHTML("beforeend", card.outerHTML);
+});
+
+// Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+customCarousel.classList.add("no-transition");
+customCarousel.scrollLeft = customCarousel.offsetWidth;
+customCarousel.classList.remove("no-transition");
+
+// Add event listeners for the arrow buttons to scroll the carousel left and right
+customArrowBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    customCarousel.scrollLeft += btn.id == "custom-left" ? -customFirstCardWidth : customFirstCardWidth;
+  });
+});
+
+const customDragStart = (e) => {
+  customIsDragging = true;
+  customWrapper.classList.add("dragging");
+  // Records the initial cursor and scroll position of the carousel
+  customStartX = e.pageX;
+  customStartScrollLeft = customCarousel.scrollLeft;
+}
+
+const customDragging = (e) => {
+  if (!customIsDragging) return; // if isDragging is false return from here
+  // Updates the scroll position of the carousel based on the cursor movement
+  customCarousel.scrollLeft = customStartScrollLeft - (e.pageX - customStartX);
+}
+
+const customDragStop = () => {
+  customIsDragging = false;
+  customWrapper.classList.remove("dragging");
+}
+
+const customInfiniteScroll = () => {
+  // If the carousel is at the beginning, scroll to the end
+  if (customCarousel.scrollLeft === 0) {
+    customCarousel.classList.add("no-transition");
+    customCarousel.scrollLeft = customCarousel.scrollWidth - (2 * customCarousel.offsetWidth);
+    customCarousel.classList.remove("no-transition");
+  }
+  // If the carousel is at the end, scroll to the beginning
+  else if (Math.ceil(customCarousel.scrollLeft) === customCarousel.scrollWidth - customCarousel.offsetWidth) {
+    customCarousel.classList.add("no-transition");
+    customCarousel.scrollLeft = customCarousel.offsetWidth;
+    customCarousel.classList.remove("no-transition");
+  }
+
+  // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+  clearTimeout(customTimeoutId);
+  if (!customWrapper.matches(":hover")) customAutoPlay();
+}
+
+const customAutoPlay = () => {
+  // Autoplay the carousel after every 2500 ms
+  customTimeoutId = setTimeout(() => customCarousel.scrollLeft += customFirstCardWidth, 4000);
+}
+customAutoPlay();
+
+customCarousel.addEventListener("mousedown", customDragStart);
+customCarousel.addEventListener("mousemove", customDragging);
+document.addEventListener("mouseup", customDragStop);
+customCarousel.addEventListener("scroll", customInfiniteScroll);
+customWrapper.addEventListener("mouseenter", () => clearTimeout(customTimeoutId));
+customWrapper.addEventListener("mouseleave", customAutoPlay);
+
 
 
 
