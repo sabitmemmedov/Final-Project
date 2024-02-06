@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1 Haftalık Oyunlar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>1 Haftalık Oyunlar</h1>
+  <ul id="gameList"></ul>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js" integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Oyun listesini göstereceğimiz HTML öğesi
+      const gameListElement = document.getElementById('gameList');
+
+      try {
+        // Axios ile JSON Server'dan oyun verilerini çekme
+        const { data } = await axios.get('http://localhost:3000/gamess');
+
+        // Son 7 gün içindeki oyunları filtreleme ve listeleme
+        const games = data
+          .filter(item => new Date(item.date) >= new Date(new Date().setDate(new Date().getDate() - 7)) && new Date(item.date) <= new Date());
+
+        // Her bir oyunu HTML listesine ekleyerek gösterme
+        games.forEach(game => {
+          const li = document.createElement('li');
+          li.textContent = `${game.name} - ${game.date}`;
+          gameListElement.appendChild(li);
+        });
+      } catch (error) {
+        // Hata durumunda konsola hata mesajını yazdırma
+        console.error('Veri çekme hatası:', error);
+      }
+    });
+  </script>
+</body>
+</html>

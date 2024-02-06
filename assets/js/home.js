@@ -1,7 +1,4 @@
-
-
 // section 2 slider 
-
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousell");
 const firstCardWidth = carousel.querySelector(".sec-two-card").offsetWidth;
@@ -88,69 +85,130 @@ wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
 ///////////////////////////////////// section 2 
 // section 2 Filterlerin renginin deyismesi
+
+
+
 function changeFilter(selectedItem, value) {
   const filterItems = document.querySelectorAll('.filter-item');
   filterItems.forEach(item => item.classList.remove('active'));
   selectedItem.classList.add('active');
-  getData(filtering, value)
+  // getData(filtering, value)
+  filtering(value)
 }
 ///slider 2 axios get 
 
-function getData(func, ctg) {
-  axios.get(`http://localhost:3000/games`)
-    .then(res => {
-      func(res.data, ctg)
-    })
-}
+// function getData(func, ctg, id = document.getElementById("sec-two-cards")) {
+//   axios.get(`http://localhost:3000/games`)
+//     .then(res => {
+//       func(res.data, ctg, id)
+//     })
+// }
 window.onload = () => {
   changeFilter(document.getElementById("defaultFilter"), 'All')
+  changedFilter(document.getElementById("filterDefault"), 'All')
+  filtering("All", document.getElementById("custom-sec-two-cards"))
 }
-function filtering(data, ctg, secTwoCards = document.getElementById("sec-two-cards")) {
-  
+async function filtering(ctg, secTwoCards = document.getElementById("sec-two-cards")) {
   secTwoCards.innerHTML = ""
-  let filter = data.filter(item => ctg.includes("All") && item.hot ? item : item.platform === ctg && item.hot)
+  var data
+  let filter
+  await axios.get(`http://localhost:3000/games`)
+    .then(res => {
+      data = res.data
+    })
+
+
+  if (secTwoCards.id === "sec-two-cards") {
+    filter = data.filter(item => ctg.includes("All") && item.hot ? item : item.platform === ctg && item.hot)
+  } else if (secTwoCards.id === "resent-cards") {
+    let dateFilter = (item) => new Date(item.date) >= new Date(new Date().setDate(new Date().getDate() - 30)) && new Date(item.date) <= new Date()
+    filter = data.filter(item => ctg.includes("All") && dateFilter(item) ? item : item.platform === ctg && dateFilter(item))
+  } else {
+    filter = data.filter(item => ctg.includes("All") && item.discount !== "")
+  }
+
 
   filter.forEach(item => {
-    let topBtns = document.querySelectorAll('disDiv')
-    console.log(topBtns);
-    secTwoCards.innerHTML += `
-    <li class="sec-two-card">
-    <div class="imgBox">
-        <img src=${item.url} alt="">
+    let starIcons = "";
+    const yellowStars = Math.min(5, item.rank);
+    for (let i = 1; i <= 5; i++) {
+      const starClass = i <= yellowStars ? "fa-solid fa-star active" : "fa-solid fa-star";
+      starIcons += `<i class="${starClass}"></i>`;
+    }
+    if (secTwoCards.id === "sec-two-cards" || secTwoCards.id === "resent-cards") {
+      secTwoCards.innerHTML += `
+      <li class="sec-two-card">
+      <div class="imgBox">
+          <img src=${item.url} alt="">
+      </div>
+      <div class="textBox">
+          <h4>
+              ${item.name}
+          </h4>
+          <div>
+            ${item.discount === "" ? `<span>$${item.price.toFixed(2)} </span> ` : `<span>$${(item.price * (1 - Number(item.discount) / 100)).toFixed(2)} </span><span style='color:gray !important;text-decoration: line-through;'>$${item.price.toFixed(2)} </span> `} 
+          </div>
+      </div>
+      <div class="iconsBox">
+        ${starIcons}
+      </div>
+      <div class="btnsBox">
+          <div class="row">
+              <div class="col-6">
+                  <button style="border-bottom-left-radius: 8px;"><i
+                          class="fa-solid fa-cart-arrow-down"></i></button>
+              </div>
+              <div class="col-6">
+                  <button style="border-bottom-right-radius: 8px;"><i
+                          class="fa-regular fa-heart"></i></button>
+              </div>
+          </div>
+      </div>
+  
+      <div  class="topBtnsBoxx" style="${item.discount === "" ? 'justify-content:end;' : 'justify-content: space-between;'}">
+      ${item.discount === "" ? "" : `<div class="disDiv"> <span class="discountSpan">-${item.discount}%</span> </div> `}
+      ${item.hot ? "<div class='hotSpanDiv'> <span class='hotSpan'>HOT</span> </div>" : ""}
     </div>
-    <div class="textBox">
-        <h4>
-            ${item.name}
-        </h4>
-        <div>
-          ${item.discount === ""?`<span>$${item.price.toFixed(2)} </span> `:`<span>$${ (item.price*(1- Number(item.discount)/100)).toFixed(2)} </span><span style='color:gray !important;text-decoration: line-through;'>$${item.price.toFixed(2)} </span> `} 
-        </div>
-    </div>
-    <div class="iconsBox">
-        <i class="fa-solid fa-star active"></i><i class="fa-solid fa-star"></i><i
-            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-            class="fa-solid fa-star"></i>
-    </div>
-    <div class="btnsBox">
-        <div class="row">
-            <div class="col-6">
-                <button style="border-bottom-left-radius: 8px;"><i
-                        class="fa-solid fa-cart-arrow-down"></i></button>
-            </div>
-            <div class="col-6">
-                <button style="border-bottom-right-radius: 8px;"><i
-                        class="fa-regular fa-heart"></i></button>
-            </div>
-        </div>
-    </div>
-
-    <div  class="topBtnsBoxx" style="${item.discount === ""? 'justify-content:end;':'justify-content: space-between;'}">
-    ${item.discount === ""? "": `<div class="disDiv"> <span class="discountSpan">- ${item.discount}%</span> </div> `}
-    ${item.hot ?"<div class='hotSpanDiv'> <span class='hotSpan'>HOT</span> </div>": ""}
-  </div>
+    </li>
+  
+      `
+    } else {
+      secTwoCards.innerHTML += `
+      
+      <li class="custom-sec-two-card">
+      <div class="imgBox">
+          <img src=${item.url} alt="">
+          <div class="imgBoxIcons">
+              <span>20%</span> <span>HOT</span>
+          </div>
+      </div>
+      <div class="textDiv">
+          <h4>
+              Call of Duty Black Ops
+          </h4>
+          <div class="iconsBox">
+              <i class="fa-solid fa-star active"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i>
+          </div>
+          <div class="priceDiv">
+              <span>$39.00</span><span class="activee">$59.00</span>
+          </div>
+          <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              bitis delectus iusto inventore!
+              Ut, autem quia!</p>
+          <div class="btnsDiv">
+              <button class="addBasket"><i class="fa-solid fa-cart-arrow-down"></i> Add to
+                  card</button>
+              <button class="addWish"><i class="fa-regular fa-heart"></i></button>
+          </div>
+      </div>
   </li>
+      
+      
+      `
+    }
 
-    `
   })
 }
 ////////////////////////////////////////////////////////////////
@@ -243,6 +301,17 @@ customCarousel.addEventListener("scroll", customInfiniteScroll);
 customWrapper.addEventListener("mouseenter", () => clearTimeout(customTimeoutId));
 customWrapper.addEventListener("mouseleave", customAutoPlay);
 
+
+
+
+/////////// section resent 
+
+function changedFilter(selectedItem, value) {
+  const filterItems = document.querySelectorAll('.item-filter');
+  filterItems.forEach(item => item.classList.remove('active'));
+  selectedItem.classList.add('active');
+  filtering(value, document.getElementById("resent-cards"))
+}
 
 
 
