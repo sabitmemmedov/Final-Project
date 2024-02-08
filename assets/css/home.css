@@ -27,6 +27,14 @@ header .navbar-nav .nav-link {
   font-size: 18px;
   font-weight: 600;
 }
+header .navbar-nav .nav-link span {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 2px 12px;
+  border-radius: 12px;
+  background-color: #CD3D0F;
+}
 header .navbar-nav .nav-link:hover {
   color: #CD3D0F !important;
   transition: ease-in-out 0.3s;
@@ -55,6 +63,9 @@ header .navbar-text .icons-div .iconDiv i {
   font-size: 28px;
   color: #fff;
   transition: ease-in-out 0.3s;
+}
+header .navbar-text .icons-div .iconDiv .active {
+  color: #CD3D0F;
 }
 header .navbar-text .icons-div .iconDiv i:hover {
   color: #CD3D0F;
@@ -543,6 +554,8 @@ header .navbar-text .icons-div .iconDiv span {
 #custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .imgBox img {
   width: 100%;
   border-radius: 10px;
+  height: 60% !important;
+  background-size: cover;
 }
 #custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .imgBox .imgBoxIcons {
   padding: 10px 5px;
@@ -752,9 +765,12 @@ header .navbar-text .icons-div .iconDiv span {
   color: #CD3D0F;
 }
 #section-resent-game .section-resent-game-content .resent-cards-main-div .resent-cards {
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 32px;
+  justify-content: center;
 }
 #section-resent-game .section-resent-game-content .resent-cards-main-div .resent-cards .sec-two-card {
   width: 300px;
@@ -881,6 +897,8 @@ footer .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 footer .footer-content p {
   margin: 0;
@@ -895,6 +913,7 @@ footer .footer-content ul {
   display: flex;
   padding: 0;
   margin: 0;
+  flex-wrap: wrap;
 }
 footer .footer-content ul li {
   display: flex;
@@ -923,7 +942,15 @@ footer .footer-content ul li a:hover {
 }
 
 @media screen and (max-width: 560px) {
+  header .navbar-brand img {
+    width: 169px;
+  }
   #custom-featured-section .custom-featured-carousel .custom-wrapper .custom-carousell .custom-sec-two-card .description {
     display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  header .navbar-nav {
+    padding-left: 0 !important;
   }
 }

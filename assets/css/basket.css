@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(205, 62, 15, 0.4862745098);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #182028;
+}
+
+header {
+  padding: 10px 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #00080F !important;
+}
+header .navbar-nav {
+  gap: 30px;
+  padding-left: 40px;
+}
+header .navbar-nav .nav-link {
+  color: #fff;
+  transition: ease-in-out 0.3s;
+  font-size: 18px;
+  font-weight: 600;
+}
+header .navbar-nav .nav-link span {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 2px 12px;
+  border-radius: 12px;
+  background-color: #CD3D0F;
+}
+header .navbar-nav .nav-link:hover {
+  color: #CD3D0F !important;
+  transition: ease-in-out 0.3s;
+}
+header .navbar-nav .active {
+  color: #CD3D0F !important;
+}
+header .burger-menu {
+  border: 0;
+}
+header .burger-menu i {
+  color: #fff;
+  font-size: 26px;
+}
+header .burger-menu:focus {
+  box-shadow: none !important;
+}
+header .navbar-text .icons-div {
+  display: flex;
+  gap: 30px;
+}
+header .navbar-text .icons-div .iconDiv {
+  position: relative;
+}
+header .navbar-text .icons-div .iconDiv i {
+  font-size: 28px;
+  color: #fff;
+  transition: ease-in-out 0.3s;
+}
+header .navbar-text .icons-div .iconDiv .active {
+  color: #CD3D0F;
+}
+header .navbar-text .icons-div .iconDiv i:hover {
+  color: #CD3D0F;
+  transition: ease-in-out 0.3s;
+}
+header .navbar-text .icons-div .iconDiv span {
+  font-size: 14px;
+  left: -10px;
+  bottom: 70%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #CD3D0F;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+#section-hero {
+  padding: 40px 0;
+  font-family: "Roboto", sans-serif;
+  min-height: 81vh;
+  background-color: #121212;
+}
+#section-hero .section-hero-content .section-head-text {
+  padding: 40px 0;
+}
+#section-hero .section-hero-content .section-head-text h1 {
+  color: #fff;
+}
+#section-hero .section-hero-content .section-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#section-hero .section-hero-content .section-cards .cardBox {
+  padding: 10px;
+  background-color: #202020;
+  border-radius: 6px;
+}
+#section-hero .section-hero-content .section-cards .cardBox .imgBox img {
+  border-radius: 6px;
+  height: 100%;
+  width: 100%;
+}
+#section-hero .section-hero-content .section-cards .cardBox .textBox h4 {
+  color: #fff;
+}
+#section-hero .section-hero-content .section-cards .cardBox .textBox p {
+  color: rgba(245, 245, 245, 0.6) !important;
+}
+#section-hero .section-hero-content .section-cards .cardBox .btnsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  height: 100%;
+  gap: 20px;
+  justify-content: space-between;
+}
+#section-hero .section-hero-content .section-cards .cardBox .btnsBox .prices {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#section-hero .section-hero-content .section-cards .cardBox .btnsBox .prices span {
+  color: #fff;
+}
+#section-hero .section-hero-content .section-cards .cardBox .btnsBox .prices .discount-rate {
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: #CD3D0F;
+}
+#section-hero .section-hero-content .section-cards .cardBox .btnsBox .prices .first-price {
+  font-size: 16px;
+  text-decoration: line-through;
+  color: rgba(245, 245, 245, 0.6);
+}
+#section-hero .section-hero-content .section-cards .cardBox .btnsBox .prices .last-price {
+  font-size: 17px;
+  font-weight: 400;
+}
+#section-hero .section-hero-content .section-cards .cardBox .btnsBox .btnsDiv {
+  display: flex;
+  gap: 10px;
+}
+#section-hero .section-hero-content .section-cards .cardBox .btnsBox .btnsDiv button {
+  border: 0;
+  box-sizing: border-box;
+  outline: 0;
+  background-color: transparent;
+  font-size: 14px;
+  border-radius: 4px;
+}
+#section-hero .section-hero-content .section-cards .cardBox .btnsBox .btnsDiv .addBtn {
+  transition: 0.3s;
+  font-weight: 500;
+  color: #fff;
+  padding: 13px 20px;
+  border: 2px solid #fff;
+}
+#section-hero .section-hero-content .section-cards .cardBox .btnsBox .btnsDiv .addBtn:hover {
+  border: 2px solid #CD3D0F;
+  color: #CD3D0F;
+}
+#section-hero .section-hero-content .section-cards .cardBox .btnsBox .btnsDiv .removeBtn {
+  transition: 0.3s;
+  color: rgba(245, 245, 245, 0.6);
+  font-size: 16px;
+  text-decoration: underline;
+}
+#section-hero .section-hero-content .section-cards .cardBox .btnsBox .btnsDiv .removeBtn:hover {
+  color: #CD3D0F;
+}
+#section-hero .section-hero-content .summaryBox .title {
+  padding: 0 0 20px 0;
+}
+#section-hero .section-hero-content .summaryBox .title h2 {
+  color: #fff;
+}
+#section-hero .section-hero-content .summaryBox .priceBox {
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+#section-hero .section-hero-content .summaryBox .priceBox div {
+  display: flex;
+  justify-content: space-between;
+}
+#section-hero .section-hero-content .summaryBox .subtotalBox {
+  color: #fff;
+  padding: 20px 0;
+}
+#section-hero .section-hero-content .summaryBox .subtotalBox div {
+  display: flex;
+  justify-content: space-between;
+}
+#section-hero .section-hero-content .summaryBox .subtotalBox div p {
+  font-weight: 600;
+}
+#section-hero .section-hero-content .summaryBox .btnBox button {
+  transition: 0.5s;
+  width: 100%;
+  height: 50px;
+  border: 2px solid #CD3D0F;
+  border-radius: 6px;
+  background-color: #CD3D0F;
+  color: #fff;
+  font-weight: 500;
+}
+#section-hero .section-hero-content .summaryBox .btnBox button:hover {
+  background-color: transparent;
+  color: #CD3D0F;
+  transition: 0.5s;
+  background-color: white;
+}
+
+footer {
+  padding: 30px 0 29px 0;
+  background-color: #00080F;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+footer .footer-content p {
+  margin: 0;
+  padding: 0;
+  color: #90989f;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+footer .footer-content ul {
+  gap: 20px;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+footer .footer-content ul li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer .footer-content ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  text-decoration: none;
+}
+footer .footer-content ul li a i {
+  font-size: 16px;
+  color: #fff;
+}
+footer .footer-content ul li a:hover {
+  transition: 0.3s;
+  background-color: #E0232D !important;
+}
+
+@media screen and (max-width: 560px) {
+  header .navbar-brand img {
+    width: 169px;
+  }
+}
+@media screen and (max-width: 991px) {
+  header .navbar-nav {
+    padding-left: 0 !important;
+  }
+}

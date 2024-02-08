@@ -7,25 +7,20 @@ const carouselChildrens = [...carousel.children];
 
 let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
 
-// Get the number of cards that can fit in the carousel at once
 let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
 
-// Insert copies of the last few cards to beginning of carousel for infinite scrolling
 carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
   carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
 });
 
-// Insert copies of the first few cards to end of carousel for infinite scrolling
 carouselChildrens.slice(0, cardPerView).forEach(card => {
   carousel.insertAdjacentHTML("beforeend", card.outerHTML);
 });
 
-// Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
 carousel.classList.add("no-transition");
 carousel.scrollLeft = carousel.offsetWidth;
 carousel.classList.remove("no-transition");
 
-// Add event listeners for the arrow buttons to scroll the carousel left and right
 arrowBtns.forEach(btn => {
   btn.addEventListener("click", () => {
     carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
@@ -35,14 +30,12 @@ arrowBtns.forEach(btn => {
 const dragStart = (e) => {
   isDragging = true;
   carousel.classList.add("dragging");
-  // Records the initial cursor and scroll position of the carousel
   startX = e.pageX;
   startScrollLeft = carousel.scrollLeft;
 }
 
 const dragging = (e) => {
-  if (!isDragging) return; // if isDragging is false return from here
-  // Updates the scroll position of the carousel based on the cursor movement
+  if (!isDragging) return;
   carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
 }
 
@@ -52,27 +45,23 @@ const dragStop = () => {
 }
 
 const infiniteScroll = () => {
-  // If the carousel is at the beginning, scroll to the end
   if (carousel.scrollLeft === 0) {
     carousel.classList.add("no-transition");
     carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
     carousel.classList.remove("no-transition");
   }
-  // If the carousel is at the end, scroll to the beginning
   else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
     carousel.classList.add("no-transition");
     carousel.scrollLeft = carousel.offsetWidth;
     carousel.classList.remove("no-transition");
   }
 
-  // Clear existing timeout & start autoplay if mouse is not hovering over carousel
   clearTimeout(timeoutId);
   if (!wrapper.matches(":hover")) autoPlay();
 }
 
 const autoPlay = () => {
-  if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
-  // Autoplay the carousel after every 2500 ms
+  if (window.innerWidth < 800 || !isAutoPlay) return;
   timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
 }
 autoPlay();
@@ -92,17 +81,12 @@ function changeFilter(selectedItem, value) {
   const filterItems = document.querySelectorAll('.filter-item');
   filterItems.forEach(item => item.classList.remove('active'));
   selectedItem.classList.add('active');
-  // getData(filtering, value)
+
   filtering(value)
 }
 ///slider 2 axios get 
 
-// function getData(func, ctg, id = document.getElementById("sec-two-cards")) {
-//   axios.get(`http://localhost:3000/games`)
-//     .then(res => {
-//       func(res.data, ctg, id)
-//     })
-// }
+
 window.onload = () => {
   changeFilter(document.getElementById("defaultFilter"), 'All')
   changedFilter(document.getElementById("filterDefault"), 'All')
@@ -112,11 +96,7 @@ async function filtering(ctg, secTwoCards = document.getElementById("sec-two-car
   secTwoCards.innerHTML = ""
   var data
   let filter
-  await axios.get(`http://localhost:3000/games`)
-    .then(res => {
-      data = res.data
-    })
-
+  await axios.get(`http://localhost:3000/games`).then(res => data = res.data)
 
   if (secTwoCards.id === "sec-two-cards") {
     filter = data.filter(item => ctg.includes("All") && item.hot ? item : item.platform === ctg && item.hot)
@@ -146,7 +126,7 @@ async function filtering(ctg, secTwoCards = document.getElementById("sec-two-car
               ${item.name}
           </h4>
           <div>
-            ${item.discount === "" ? `<span>$${item.price.toFixed(2)} </span> ` : `<span>$${(item.price * (1 - Number(item.discount) / 100)).toFixed(2)} </span><span style='color:gray !important;text-decoration: line-through;'>$${item.price.toFixed(2)} </span> `} 
+          ${item.discount === "" ? `<span>$${item.price.toFixed(2)} </span> ` : `<span>$${(item.price * (1 - Number(item.discount) / 100)).toFixed(2)} </span><span style='color:gray !important;text-decoration: line-through;'>$${item.price.toFixed(2)} </span> `} 
           </div>
       </div>
       <div class="iconsBox">
@@ -178,25 +158,22 @@ async function filtering(ctg, secTwoCards = document.getElementById("sec-two-car
       <li class="custom-sec-two-card">
       <div class="imgBox">
           <img src=${item.url} alt="">
-          <div class="imgBoxIcons">
-              <span>20%</span> <span>HOT</span>
+          <div class="imgBoxIcons" style="${item.discount === "" ? 'justify-content:end;' : 'justify-content: space-between;'}">
+             ${item.discount === "" ? "" : `<span>-${item.discount}%</span> `}
+             ${item.hot ? `<span>HOT</span>` : ""}
           </div>
       </div>
       <div class="textDiv">
           <h4>
-              Call of Duty Black Ops
+             ${item.name}
           </h4>
           <div class="iconsBox">
-              <i class="fa-solid fa-star active"></i><i class="fa-solid fa-star"></i><i
-                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                  class="fa-solid fa-star"></i>
+              ${starIcons}
           </div>
           <div class="priceDiv">
-              <span>$39.00</span><span class="activee">$59.00</span>
+              ${item.discount === "" ? `<span>$${item.price.toFixed(2)} </span> ` : `<span>$${(item.price * (1 - Number(item.discount) / 100)).toFixed(2)} </span><span style='color:gray !important;text-decoration: line-through;'>$${item.price.toFixed(2)} </span> `}
           </div>
-          <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              bitis delectus iusto inventore!
-              Ut, autem quia!</p>
+          <p class="description">${item.description}</p>
           <div class="btnsDiv">
               <button class="addBasket"><i class="fa-solid fa-cart-arrow-down"></i> Add to
                   card</button>
@@ -225,25 +202,20 @@ const customCarouselChildrens = [...customCarousel.children];
 
 let customIsDragging = false, customStartX, customStartScrollLeft, customTimeoutId;
 
-// Get the number of cards that can fit in the carousel at once
 let customCardPerView = Math.round(customCarousel.offsetWidth / customFirstCardWidth);
 
-// Insert copies of the last few cards to beginning of carousel for infinite scrolling
 customCarouselChildrens.slice(-customCardPerView).reverse().forEach(card => {
   customCarousel.insertAdjacentHTML("afterbegin", card.outerHTML);
 });
 
-// Insert copies of the first few cards to end of carousel for infinite scrolling
 customCarouselChildrens.slice(0, customCardPerView).forEach(card => {
   customCarousel.insertAdjacentHTML("beforeend", card.outerHTML);
 });
 
-// Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
 customCarousel.classList.add("no-transition");
 customCarousel.scrollLeft = customCarousel.offsetWidth;
 customCarousel.classList.remove("no-transition");
 
-// Add event listeners for the arrow buttons to scroll the carousel left and right
 customArrowBtns.forEach(btn => {
   btn.addEventListener("click", () => {
     customCarousel.scrollLeft += btn.id == "custom-left" ? -customFirstCardWidth : customFirstCardWidth;
@@ -253,14 +225,12 @@ customArrowBtns.forEach(btn => {
 const customDragStart = (e) => {
   customIsDragging = true;
   customWrapper.classList.add("dragging");
-  // Records the initial cursor and scroll position of the carousel
   customStartX = e.pageX;
   customStartScrollLeft = customCarousel.scrollLeft;
 }
 
 const customDragging = (e) => {
-  if (!customIsDragging) return; // if isDragging is false return from here
-  // Updates the scroll position of the carousel based on the cursor movement
+  if (!customIsDragging) return;
   customCarousel.scrollLeft = customStartScrollLeft - (e.pageX - customStartX);
 }
 
@@ -270,26 +240,22 @@ const customDragStop = () => {
 }
 
 const customInfiniteScroll = () => {
-  // If the carousel is at the beginning, scroll to the end
   if (customCarousel.scrollLeft === 0) {
     customCarousel.classList.add("no-transition");
     customCarousel.scrollLeft = customCarousel.scrollWidth - (2 * customCarousel.offsetWidth);
     customCarousel.classList.remove("no-transition");
   }
-  // If the carousel is at the end, scroll to the beginning
   else if (Math.ceil(customCarousel.scrollLeft) === customCarousel.scrollWidth - customCarousel.offsetWidth) {
     customCarousel.classList.add("no-transition");
     customCarousel.scrollLeft = customCarousel.offsetWidth;
     customCarousel.classList.remove("no-transition");
   }
 
-  // Clear existing timeout & start autoplay if mouse is not hovering over carousel
   clearTimeout(customTimeoutId);
   if (!customWrapper.matches(":hover")) customAutoPlay();
 }
 
 const customAutoPlay = () => {
-  // Autoplay the carousel after every 2500 ms
   customTimeoutId = setTimeout(() => customCarousel.scrollLeft += customFirstCardWidth, 4000);
 }
 customAutoPlay();
@@ -315,4 +281,6 @@ function changedFilter(selectedItem, value) {
 
 
 
+
+////// ad basket
 
