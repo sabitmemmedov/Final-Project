@@ -28,7 +28,8 @@ header {
             transition: ease-in-out 0.3s;
             font-size: 18px;
             font-weight: 600;
-            span{
+
+            span {
                 color: #fff;
                 font-size: 14px;
                 font-weight: 300;
@@ -76,9 +77,11 @@ header {
                     color: #fff;
                     transition: ease-in-out 0.3s;
                 }
-                .active{
+
+                .active {
                     color: #CD3D0F;
                 }
+
                 i:hover {
                     color: #CD3D0F;
                     transition: ease-in-out 0.3s;
@@ -105,8 +108,70 @@ header {
     }
 }
 
-#section-hero{
+#section-hero {
     min-height: 81vh;
+    background-color: #081018;
+    padding: 40px 0;
+
+    .section-hero-content {
+        .contactFormBox {
+            border-radius: 6px;
+            padding: 60px 30px;
+            background-color: #202020;
+            max-width: 800px;
+            margin: 0 auto;
+
+            .title {
+                padding: 20px 0;
+                h2 {
+                    color: #fff;
+                }
+            }
+
+            form {
+                display: flex;
+                gap: 20px;
+                flex-direction: column;
+                width: 100%;
+
+                input {
+                    color: #fff;
+                    width: 100%;
+                    border: 1px solid #fff;
+                    outline: 0;
+                    background-color: transparent;
+                    height: 45px;
+                    border-radius: 6px;
+                    padding: 0 20px;
+
+                    &:focus {
+                        border: 1px solid #CD3D0F;
+                        outline: none;
+                    }
+                }
+
+                textarea {
+                    padding: 10px 20px;
+                    background-color: transparent;
+                    border-radius: 6px;
+                    border: 1px solid #fff;
+                    color: #fff;
+                    outline: none;
+                    &:focus{
+                        border: 1px solid #CD3D0F;
+                    }
+                }
+                button{
+                    height: 45px;
+                    color: #fff;
+                    background-color: #CD3D0F;
+                    font-weight: 500;
+                    border: 0;
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
 }
 
 
@@ -115,7 +180,7 @@ header {
 
 
 footer {
-    padding:30px 0 29px 0;
+    padding: 30px 0 29px 0;
     background-color: #00080F;
 
     .footer-content {
@@ -175,17 +240,18 @@ footer {
 
 @media screen and (max-width:560px) {
     header {
-        .navbar-brand{
-            img{
+        .navbar-brand {
+            img {
                 width: 169px;
             }
         }
     }
 }
+
 @media screen and (max-width:991px) {
 
-    header{
-        .navbar-nav{
+    header {
+        .navbar-nav {
             padding-left: 0 !important;
         }
     }

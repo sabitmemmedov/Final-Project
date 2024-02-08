@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 ::-webkit-scrollbar {
   width: 8px;
@@ -87,7 +88,206 @@ header .navbar-text .icons-div .iconDiv span {
 }
 
 #section-hero {
+  background-color: #081018;
+  padding: 40px 0;
   min-height: 81vh;
+}
+#section-hero .section-hero-content .filterBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10px;
+  border-radius: 6px;
+  background-color: #182028;
+}
+#section-hero .section-hero-content .filterBox .searchBox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#section-hero .section-hero-content .filterBox .searchBox input {
+  width: 80%;
+  height: 45px;
+  background-color: #081018;
+  outline: 0;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border: 1px solid #081018;
+  padding: 0 20px;
+  color: #fff;
+}
+#section-hero .section-hero-content .filterBox .searchBox button {
+  width: 20%;
+  border: 0;
+  height: 45px;
+  border: 1px solid #CD3D0F;
+  background-color: #CD3D0F;
+  color: #fff;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+#section-hero .section-hero-content .filterBox .platformBox span {
+  color: #fff;
+  display: inline-block;
+  padding: 10px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#section-hero .section-hero-content .filterBox .platformBox select {
+  width: 100%;
+  outline: 0;
+  background-color: #081018;
+  color: #fff;
+  padding: 10px 12px;
+}
+#section-hero .section-hero-content .filterBox .platformBox select option {
+  padding: 10px;
+}
+#section-hero .section-hero-content .filterBox .platformBox select option:checked {
+  color: #CD3D0F;
+}
+#section-hero .section-hero-content .filterBox .platformBox select option:hover {
+  background: none;
+}
+#section-hero .section-hero-content .filterBox .priceBox select {
+  width: 100%;
+  outline: 0;
+  background-color: #081018;
+  color: #fff;
+  padding: 10px 12px;
+}
+#section-hero .section-hero-content .filterBox .priceBox select option {
+  padding: 10px;
+}
+#section-hero .section-hero-content .filterBox .priceBox select option:checked {
+  color: #CD3D0F;
+}
+#section-hero .section-hero-content .filterBox .priceBox select option:hover {
+  background: none;
+  /* Seçilmiş option üzerinde gezinildiğinde arka plan rengini kaldırma */
+}
+#section-hero .section-hero-content .productsBox .products-cards {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card {
+  width: 230px;
+  position: relative;
+  background-color: #182028 !important;
+  padding: 0px !important;
+  border-radius: 4px;
+  overflow: hidden;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .imgBox {
+  width: 100% !important;
+  border: 4px solid #182028 !important;
+  border-radius: 4px;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .imgBox img {
+  width: 100%;
+  border-radius: 3px;
+  object-fit: cover;
+  height: 340px;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .textBox {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  align-items: start;
+  width: 100%;
+  padding: 10px 20px;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .textBox h4 {
+  transition: 0.3s;
+  font-size: 20px;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .textBox h4:hover {
+  color: #CD3D0F;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .textBox span {
+  color: #CD3D0F;
+  font-weight: 500;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .iconsBox {
+  padding: 10px 20px 30px 20px;
+  width: 100%;
+  display: flex;
+  gap: 1px;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .iconsBox i {
+  color: #262E36;
+  font-size: 14px;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .iconsBox .active {
+  color: #FEBF00;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .btnsBox {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  z-index: 5;
+  bottom: -4px;
+  position: absolute;
+  width: 100%;
+  background-color: #081018;
+  display: none;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .btnsBox .row {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .btnsBox .row .col-6 {
+  padding: 0 !important;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .btnsBox .row .col-6 button {
+  height: 50px;
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .btnsBox .row .col-6 button i {
+  font-size: 20px;
+  color: #fff;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .btnsBox .row .col-6 button:hover {
+  background-color: #7a2508;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .topBtnsBoxx {
+  width: 100%;
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .topBtnsBoxx .hotSpanDiv {
+  display: flex;
+  justify-items: end !important;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .topBtnsBoxx div {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .topBtnsBoxx div span {
+  background-color: #E0232D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  padding: 0;
+  padding: 12px 8px;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 14px;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card:hover .btnsBox {
+  transition: 1s;
+  display: block;
+  background-color: #CD3D0F;
 }
 
 footer {

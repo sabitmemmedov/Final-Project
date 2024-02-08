@@ -88,6 +88,60 @@ header .navbar-text .icons-div .iconDiv span {
 
 #section-hero {
   min-height: 81vh;
+  background-color: #081018;
+  padding: 40px 0;
+}
+#section-hero .section-hero-content .contactFormBox {
+  border-radius: 6px;
+  padding: 60px 30px;
+  background-color: #202020;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#section-hero .section-hero-content .contactFormBox .title {
+  padding: 20px 0;
+}
+#section-hero .section-hero-content .contactFormBox .title h2 {
+  color: #fff;
+}
+#section-hero .section-hero-content .contactFormBox form {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+}
+#section-hero .section-hero-content .contactFormBox form input {
+  color: #fff;
+  width: 100%;
+  border: 1px solid #fff;
+  outline: 0;
+  background-color: transparent;
+  height: 45px;
+  border-radius: 6px;
+  padding: 0 20px;
+}
+#section-hero .section-hero-content .contactFormBox form input:focus {
+  border: 1px solid #CD3D0F;
+  outline: none;
+}
+#section-hero .section-hero-content .contactFormBox form textarea {
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  color: #fff;
+  outline: none;
+}
+#section-hero .section-hero-content .contactFormBox form textarea:focus {
+  border: 1px solid #CD3D0F;
+}
+#section-hero .section-hero-content .contactFormBox form button {
+  height: 45px;
+  color: #fff;
+  background-color: #CD3D0F;
+  font-weight: 500;
+  border: 0;
+  border-radius: 6px;
 }
 
 footer {
