@@ -374,6 +374,5 @@ footer .footer-content ul li a:hover {
 @media screen and (max-width: 991px) {
   header .navbar-nav {
     padding-left: 0 !important;
-    gap: 0;
   }
 }

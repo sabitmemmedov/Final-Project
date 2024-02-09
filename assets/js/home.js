@@ -91,6 +91,10 @@ window.onload = () => {
   changeFilter(document.getElementById("defaultFilter"), 'All')
   changedFilter(document.getElementById("filterDefault"), 'All')
   filtering("All", document.getElementById("custom-sec-two-cards"))
+  getData()
+  checkUser();
+  getUsers()
+
 }
 async function filtering(ctg, secTwoCards = document.getElementById("sec-two-cards")) {
   secTwoCards.innerHTML = ""
@@ -135,11 +139,11 @@ async function filtering(ctg, secTwoCards = document.getElementById("sec-two-car
       <div class="btnsBox">
           <div class="row">
               <div class="col-6">
-                  <button style="border-bottom-left-radius: 8px;"><i
+                  <button onclick="addBasket(${item.id})" style="border-bottom-left-radius: 8px;"><i
                           class="fa-solid fa-cart-arrow-down"></i></button>
               </div>
               <div class="col-6">
-                  <button style="border-bottom-right-radius: 8px;"><i
+                  <button onclick="addWish(${item.id})" style="border-bottom-right-radius: 8px;"><i
                           class="fa-regular fa-heart"></i></button>
               </div>
           </div>
@@ -283,4 +287,85 @@ function changedFilter(selectedItem, value) {
 
 
 ////// ad basket
+let findData
+async function getData() {
+  await axios.get(`http://localhost:3000/games`)
+    .then(res => {
+      findData = res.data
+      // console.log(findData);
+    })
+}
+
+let findUser
+async function getUsers() {
+  await axios.get(`http://localhost:3000/users`)
+    .then(res => {
+      findUser = res.data
+    })
+}
+
+
+async function addBasket(id) {
+  var filterLocale
+  let user = JSON.parse(localStorage.getItem("user")) || []
+  if (user.length > 0) {
+    let check = findUser.find((value) => user.find((setValue) => filterLocale = value.id === setValue.id))
+    if (check) {
+      // console.log(check.id);
+      let data = []
+      data.push(findData.find(item => item.id === id.toString()))
+      // data.push(findData.find(item => item.id == id))
+      // console.log(data);
+      await axios.get(`http://localhost:3000/users/${check.id}/`)
+        .then(res => {
+          console.log(res.data);
+        })
+      // axios.post(`http://localhost:3000/users/${check.id}/cart`, { game:"gta"})
+    }
+    // axios.post()
+  } else {
+    window.location.href = "./login.html"
+  }
+}
+
+// async function addBasket(id) {
+//   let user = JSON.parse(localStorage.getItem("user")) || [];
+//   if (user.length > 0) {
+//     let check = findUser.find((value) => user.find((setValue) => value.id === setValue.id));
+//     if (check) {
+//       try {
+//         console.log(check.id);
+//         let data = [findData.find(item => item.id == id)];
+//         await axios.post(`http://localhost:3000/users/${check.id}/cart`, data);
+//         console.log("Item added to cart successfully.");
+//       } catch (error) {
+//         console.error("Error adding item to cart:", error);
+//       }
+//     }
+//   } else {
+//     window.location.href = "./login.html";
+//   }
+// }
+
+
+
+
+let nouser = document.getElementById("notuser")
+let yesuser = document.getElementById("yesuser")
+function checkUser() {
+  let user = JSON.parse(localStorage.getItem("user")) || []
+  if (user.length > 0) {
+    nouser.style.display = "none";
+    yesuser.style.display = 'inline-block'
+  } else {
+    nouser.style.display = "inline-block";
+    yesuser.style.display = 'none'
+  }
+}
+
+function logout() {
+  localStorage.removeItem('user');
+  checkUser()
+}
+
 

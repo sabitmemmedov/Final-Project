@@ -1,6 +1,17 @@
-let nouser = document.getElementById("notuser")
+// function getData() {
+//     let basket = JSON.parse(localStorage.getItem("basket")) || []
+//     console.log(basket);
+// }
+// getData()
+
+window.onload = () => {
+    checkUser()
+}
+
+let nouser = document.getElementById("nouser")
 let yesuser = document.getElementById("yesuser")
 function checkUser() {
+    console.log("skAKNDOOJDOAD");
   let user = JSON.parse(localStorage.getItem("user")) || []
   if (user.length > 0) {
     nouser.style.display = "none"; 
@@ -16,6 +27,3 @@ function logout() {
   checkUser()
 }
 
-window.onload = () => {
-    checkUser()
-}

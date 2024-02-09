@@ -329,6 +329,31 @@
       ]
     }
   ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Sabit",
+      "surname": "Memmedov",
+      "email": "sabitmemmedov@gmail.com",
+      "password": "sabit123",
+      "library": ["damdw"],
+      "wishlist":[],
+      "cart":["wdqdqd"]
+    },
+    {
+      "id": "f9e5",
+      "email": "vusaldemirciyev@gmail.com",
+      "name": "Vusal",
+      "surname": "Demirciyev",
+      "password": "vusal123",
+      "library": ["damdw"],
+      "wishlist":[],
+      "cartId":[{
+        "cart":["wdqdqd"]
+
+      }]
+    }
+  ],
   "profile": {
     "name": "typicode"
   }

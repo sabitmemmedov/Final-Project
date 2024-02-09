@@ -50,8 +50,16 @@
                         <span class="navbar-text">
                             <div class="icons-div">
                                 <div class="iconDiv">
-                                    <a href="./login.html">
+                                    <a id="nouser" href="./login.html">
                                         <i class="fa-regular fa-user"></i>
+                                    </a>
+                                    <a id="yesuser" href="#">
+                                        <i class="fa-regular fa-user"></i>
+                                        <span></span>
+                                        <ul style="color: #00AFC0;" class="user-dropdown">
+                                            <li>sabitmammadov@gmail.com</li>
+                                            <li onclick="logout()">Log out</li>
+                                        </ul>
                                     </a>
                                 </div>
                             
@@ -203,7 +211,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
         integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./assets/js/wish.js"></script>
+    <script src="./assets/js/basket.js"></script>
 </body>
 
 </html>

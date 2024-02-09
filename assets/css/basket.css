@@ -59,31 +59,55 @@ header .navbar-text .icons-div {
 header .navbar-text .icons-div .iconDiv {
   position: relative;
 }
-header .navbar-text .icons-div .iconDiv i {
+header .navbar-text .icons-div .iconDiv a:hover ul {
+  display: flex;
+}
+header .navbar-text .icons-div .iconDiv a i {
   font-size: 28px;
   color: #fff;
   transition: ease-in-out 0.3s;
 }
-header .navbar-text .icons-div .iconDiv .active {
+header .navbar-text .icons-div .iconDiv a .active {
   color: #CD3D0F;
 }
-header .navbar-text .icons-div .iconDiv i:hover {
+header .navbar-text .icons-div .iconDiv a i:hover {
   color: #CD3D0F;
   transition: ease-in-out 0.3s;
 }
-header .navbar-text .icons-div .iconDiv span {
+header .navbar-text .icons-div .iconDiv a span {
   font-size: 14px;
-  left: -10px;
-  bottom: 70%;
+  right: 0px;
+  bottom: 90%;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
-  background-color: #CD3D0F;
-  width: 22px;
-  height: 22px;
+  background-color: #A9D34F;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
+}
+header .navbar-text .icons-div .iconDiv a ul {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #18181C;
+  position: absolute;
+  top: 30px;
+  z-index: 12;
+  padding: 30px 15px;
+  border-radius: 6px;
+  margin: 0;
+}
+header .navbar-text .icons-div .iconDiv a ul li {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+header .navbar-text .icons-div .iconDiv a ul li:hover {
+  color: #E0232D;
 }
 
 #section-hero {
@@ -284,5 +308,6 @@ footer .footer-content ul li a:hover {
 @media screen and (max-width: 991px) {
   header .navbar-nav {
     padding-left: 0 !important;
+    gap: 0;
   }
 }
