@@ -34,14 +34,7 @@
       "date": "2024-01-05T20:31:16.142Z",
       "rank": 2,
       "platform": "Xbox",
-      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat"
     },
     {
       "id": "2",
@@ -53,14 +46,7 @@
       "rank": 4,
       "date": "2024-02-05T20:31:16.142Z",
       "platform": "Xbox",
-      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat"
     },
     {
       "id": "3",
@@ -72,14 +58,7 @@
       "date": "2024-02-05T20:31:16.142Z",
       "rank": 3,
       "platform": "Xbox",
-      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat"
     },
     {
       "id": "4",
@@ -91,14 +70,7 @@
       "discount": "",
       "rank": 5,
       "platform": "Xbox",
-      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat"
     },
     {
       "id": "5",
@@ -110,14 +82,7 @@
       "date": "2024-02-05T20:31:16.142Z",
       "rank": 1,
       "platform": "Xbox",
-      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat"
     },
     {
       "id": "6",
@@ -129,14 +94,7 @@
       "hot": true,
       "discount": "",
       "platform": "Playstation",
-      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat"
     },
     {
       "id": "7",
@@ -148,14 +106,7 @@
       "discount": "",
       "rank": 5,
       "platform": "Playstation",
-      "description": "Night City awaits in this futuristic open-world RPG. Immerse yourself in a gripping storyline and explore a vast, visually stunning metropolis.",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Night City awaits in this futuristic open-world RPG. Immerse yourself in a gripping storyline and explore a vast, visually stunning metropolis."
     },
     {
       "id": "8",
@@ -167,14 +118,7 @@
       "date": "2024-01-05T20:31:16.142Z",
       "rank": 2,
       "platform": "Playstation",
-      "description": "Embark on an emotional journey in a post-apocalyptic world. Uncover the harsh realities of survival as you navigate through intense action and gripping storytelling.",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Embark on an emotional journey in a post-apocalyptic world. Uncover the harsh realities of survival as you navigate through intense action and gripping storytelling."
     },
     {
       "id": "9",
@@ -186,14 +130,7 @@
       "hot": true,
       "discount": "30",
       "platform": "Playstation",
-      "description": "Become a legendary Viking raider and lead your clan to glory. Explore the stunning landscapes of England, engage in epic battles, and shape the destiny of your people.",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Become a legendary Viking raider and lead your clan to glory. Explore the stunning landscapes of England, engage in epic battles, and shape the destiny of your people."
     },
     {
       "id": "10",
@@ -205,14 +142,7 @@
       "date": "2023-12-05T20:31:16.142Z",
       "rank": 3,
       "platform": "Playstation",
-      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring.",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring."
     },
     {
       "id": "11",
@@ -224,14 +154,7 @@
       "date": "2024-01-05T20:31:16.142Z",
       "discount": "40",
       "platform": "PC",
-      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring.",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring."
     },
     {
       "id": "12",
@@ -243,14 +166,7 @@
       "date": "2024-01-05T20:31:16.142Z",
       "rank": 2,
       "platform": "PC",
-      "description": "Grand Theft Auto V, an action-packed open-world adventure, offers a stunning reimagining of Southern California's landscapes, complete with a vibrant city, picturesque beaches, and a diverse suburban backdrop.",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Grand Theft Auto V, an action-packed open-world adventure, offers a stunning reimagining of Southern California's landscapes, complete with a vibrant city, picturesque beaches, and a diverse suburban backdrop."
     },
     {
       "id": "13",
@@ -262,14 +178,7 @@
       "date": "2024-02-05T20:31:16.142Z",
       "discount": "",
       "platform": "PC",
-      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring.",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring."
     },
     {
       "id": "14",
@@ -281,14 +190,7 @@
       "hot": true,
       "discount": "50",
       "platform": "PC",
-      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring.",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring."
     },
     {
       "id": "15",
@@ -300,14 +202,7 @@
       "hot": true,
       "discount": "",
       "platform": "PC",
-      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring.",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring."
     },
     {
       "id": "16",
@@ -319,14 +214,7 @@
       "hot": false,
       "discount": "20",
       "platform": "PC",
-      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring.",
-      "comments": [
-        {
-          "id": "1",
-          "eMail": "sabitmammadov@gmail.com",
-          "comment": "super oyundur"
-        }
-      ]
+      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring."
     }
   ],
   "users": [
@@ -335,23 +223,29 @@
       "name": "Sabit",
       "surname": "Memmedov",
       "email": "sabitmemmedov@gmail.com",
-      "password": "sabit123",
-      "library": ["damdw"],
-      "wishlist":[],
-      "cart":["wdqdqd"]
+      "password": "sabit123"
     },
     {
       "id": "f9e5",
       "email": "vusaldemirciyev@gmail.com",
       "name": "Vusal",
       "surname": "Demirciyev",
-      "password": "vusal123",
-      "library": ["damdw"],
-      "wishlist":[],
-      "cartId":[{
-        "cart":["wdqdqd"]
-
-      }]
+      "password": "vusal123"
+    }
+  ],
+  "cart": [
+    {
+      "id": "7161",
+      "hot": true,
+      "discount": "",
+      "url": "https://hex-wp.com/gameshop/wp-content/uploads/2023/09/game_image_7-300x450.jpg",
+      "name": "Borderlands 3",
+      "price": 29,
+      "rank": 4,
+      "date": "2024-02-05T20:31:16.142Z",
+      "platform": "Xbox",
+      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
+      "userId": "1"
     }
   ],
   "profile": {

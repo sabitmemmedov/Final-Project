@@ -305,47 +305,50 @@ async function getUsers() {
 }
 
 
+
+
 async function addBasket(id) {
   var filterLocale
   let user = JSON.parse(localStorage.getItem("user")) || []
   if (user.length > 0) {
     let check = findUser.find((value) => user.find((setValue) => filterLocale = value.id === setValue.id))
     if (check) {
-      // console.log(check.id);
-      let data = []
-      data.push(findData.find(item => item.id === id.toString()))
-      // data.push(findData.find(item => item.id == id))
-      // console.log(data);
-      await axios.get(`http://localhost:3000/users/${check.id}/`)
+      let cardData
+      await axios.get(`http://localhost:3000/cart?userId=${check.id}`)
         .then(res => {
-          console.log(res.data);
+          cardData = res.data
         })
-      // axios.post(`http://localhost:3000/users/${check.id}/cart`, { game:"gta"})
+      let postData = findData.find(item => item.id == id);
+
+      let checkCard = cardData.find(item => item.name == postData.name)
+      if (checkCard) {
+        alert("bu mehsuldan artiq elave olunub")
+      } else {
+        postData.userId = check.id;
+
+        const uniqueId = getRandomInteger(1, 10000);
+        postData.id = uniqueId.toString();
+        try {
+          const response = await axios.post(`http://localhost:3000/cart`, postData);
+          console.log(response);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
     }
-    // axios.post()
-  } else {
-    window.location.href = "./login.html"
+  }
+  else {
+    alert("Lütfen giriş yapın")
   }
 }
 
-// async function addBasket(id) {
-//   let user = JSON.parse(localStorage.getItem("user")) || [];
-//   if (user.length > 0) {
-//     let check = findUser.find((value) => user.find((setValue) => value.id === setValue.id));
-//     if (check) {
-//       try {
-//         console.log(check.id);
-//         let data = [findData.find(item => item.id == id)];
-//         await axios.post(`http://localhost:3000/users/${check.id}/cart`, data);
-//         console.log("Item added to cart successfully.");
-//       } catch (error) {
-//         console.error("Error adding item to cart:", error);
-//       }
-//     }
-//   } else {
-//     window.location.href = "./login.html";
-//   }
-// }
+
+function getRandomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+
+
+}
 
 
 
@@ -366,6 +369,8 @@ function checkUser() {
 function logout() {
   localStorage.removeItem('user');
   checkUser()
+  window.location.reload();
+
 }
 
 
