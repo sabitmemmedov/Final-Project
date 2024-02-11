@@ -123,6 +123,7 @@ header .navbar-text .icons-div .iconDiv a ul li:hover {
   padding: 20px 10px;
   border-radius: 6px;
   background-color: #182028;
+  position: fixed;
 }
 #section-hero .section-hero-content .filterBox .searchBox {
   display: flex;
@@ -375,5 +376,8 @@ footer .footer-content ul li a:hover {
   header .navbar-nav {
     padding-left: 0 !important;
     gap: 0;
+  }
+  #section-hero .section-hero-content .filterBox {
+    position: inherit;
   }
 }

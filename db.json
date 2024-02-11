@@ -231,11 +231,44 @@
       "name": "Vusal",
       "surname": "Demirciyev",
       "password": "vusal123"
+    },
+    {
+      "id": "c760",
+      "email": "firudin@gmail.com",
+      "name": "Firudin",
+      "surname": "Allahverdi",
+      "password": "1234"
     }
   ],
   "cart": [
     {
-      "id": "7161",
+      "id": "5296",
+      "url": "https://hex-wp.com/gameshop/wp-content/uploads/2023/09/game_image_9-300x450.jpg",
+      "name": "Wreckfest",
+      "price": 89,
+      "hot": true,
+      "date": "2024-02-05T20:31:16.142Z",
+      "discount": "",
+      "rank": 5,
+      "platform": "Xbox",
+      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
+      "userId": "1"
+    },
+    {
+      "id": "6069",
+      "hot": true,
+      "discount": "",
+      "url": "https://hex-wp.com/gameshop/wp-content/uploads/2023/09/game_image_6-300x450.jpg",
+      "name": "Gears of War 5",
+      "price": 79,
+      "date": "2024-01-05T20:31:16.142Z",
+      "rank": 2,
+      "platform": "Xbox",
+      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
+      "userId": "1"
+    },
+    {
+      "id": "8673",
       "hot": true,
       "discount": "",
       "url": "https://hex-wp.com/gameshop/wp-content/uploads/2023/09/game_image_7-300x450.jpg",
@@ -243,6 +276,112 @@
       "price": 29,
       "rank": 4,
       "date": "2024-02-05T20:31:16.142Z",
+      "platform": "Xbox",
+      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
+      "userId": "1"
+    },
+    {
+      "id": "5453",
+      "url": "https://hex-wp.com/gameshop/wp-content/uploads/2023/09/game_image_10-300x450.jpg",
+      "name": "Assassin’s Creed Valhalla",
+      "price": 19,
+      "hot": true,
+      "discount": "20",
+      "date": "2024-02-05T20:31:16.142Z",
+      "rank": 1,
+      "platform": "Xbox",
+      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
+      "userId": "c760"
+    },
+    {
+      "id": "6445",
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg",
+      "name": "Cyberpunk 2077",
+      "price": 89,
+      "hot": true,
+      "date": "2024-02-05T20:31:16.142Z",
+      "discount": "",
+      "rank": 5,
+      "platform": "Playstation",
+      "description": "Night City awaits in this futuristic open-world RPG. Immerse yourself in a gripping storyline and explore a vast, visually stunning metropolis.",
+      "userId": "c760"
+    },
+    {
+      "id": "291",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8emZgngFh03kvrcS4XcaTHn4seuZHqTn-Wg&usqp=CAU",
+      "name": " Halo Infinite",
+      "price": 99,
+      "rank": 5,
+      "hot": true,
+      "date": "2024-01-05T20:31:16.142Z",
+      "discount": "40",
+      "platform": "PC",
+      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring.",
+      "userId": "1"
+    },
+    {
+      "id": "2610",
+      "url": "https://hex-wp.com/gameshop/wp-content/uploads/2023/09/game_image_8-300x450.jpg",
+      "name": "God of War",
+      "hot": true,
+      "discount": "",
+      "price": 39,
+      "date": "2024-02-05T20:31:16.142Z",
+      "rank": 3,
+      "platform": "Xbox",
+      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
+      "userId": "1"
+    }
+  ],
+  "wishlist": [
+    {
+      "id": "9084",
+      "hot": true,
+      "discount": "",
+      "url": "https://hex-wp.com/gameshop/wp-content/uploads/2023/09/game_image_6-300x450.jpg",
+      "name": "Gears of War 5",
+      "price": 79,
+      "date": "2024-01-05T20:31:16.142Z",
+      "rank": 2,
+      "platform": "Xbox",
+      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
+      "userId": "c760"
+    },
+    {
+      "id": "5444",
+      "url": "https://hex-wp.com/gameshop/wp-content/uploads/2023/09/game_image_10-300x450.jpg",
+      "name": "Assassin’s Creed Valhalla",
+      "price": 19,
+      "hot": true,
+      "discount": "20",
+      "date": "2024-02-05T20:31:16.142Z",
+      "rank": 1,
+      "platform": "Xbox",
+      "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
+      "userId": "c760"
+    },
+    {
+      "id": "9657",
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg",
+      "name": "Cyberpunk 2077",
+      "price": 89,
+      "hot": true,
+      "date": "2024-02-05T20:31:16.142Z",
+      "discount": "",
+      "rank": 5,
+      "platform": "Playstation",
+      "description": "Night City awaits in this futuristic open-world RPG. Immerse yourself in a gripping storyline and explore a vast, visually stunning metropolis.",
+      "userId": "c760"
+    },
+    {
+      "id": "3776",
+      "url": "https://hex-wp.com/gameshop/wp-content/uploads/2023/09/game_image_8-300x450.jpg",
+      "name": "God of War",
+      "hot": true,
+      "discount": "",
+      "price": 39,
+      "date": "2024-02-05T20:31:16.142Z",
+      "rank": 3,
       "platform": "Xbox",
       "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat",
       "userId": "1"

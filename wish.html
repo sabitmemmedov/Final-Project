@@ -36,10 +36,10 @@
                                 <a class="nav-link" href="./shop.html">Shop</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="./wish.html">Wishlist <span>2</span></a>
+                                <a class="nav-link active" href="./wish.html">Wishlist <span id="showWishCount">2</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./basket.html">Cart <span>0</span></a>
+                                <a class="nav-link" href="./basket.html">Cart </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./contact.html">Contact</a>
@@ -50,14 +50,14 @@
                         <span class="navbar-text">
                             <div class="icons-div">
                                 <div class="iconDiv">
-                                    <a id="notuser" href="./login.html">
+                                    <a id="nouser" href="./login.html">
                                         <i class="fa-regular fa-user"></i>
                                     </a>
                                     <a id="yesuser" href="#">
                                         <i class="fa-regular fa-user"></i>
                                         <span></span>
                                         <ul style="color: #00AFC0;" class="user-dropdown">
-                                            <li>sabitmammadov@gmail.com</li>
+                                            <li id="usermail"></li>
                                             <li onclick="logout()">Log out</li>
                                         </ul>
                                     </a>
@@ -77,58 +77,8 @@
                     <div class="section-head-text">
                         <h1>Wishlist</h1>
                     </div>
-                    <div class="section-cards">
+                    <div id="cardsBox" class="section-cards">
 
-                        <div class="cardBox">
-                            <div class="row">
-                                <div class="col-4 col-sm-2 col-xl-2">
-                                    <div class="imgBox"><img
-                                            src="./assets/img/game_image_6-300x450.jpg" alt=""></div>
-                                </div>
-                                <div class="col-xl-4 col-sm-4  col-8">
-                                    <div class="textBox">
-                                        <h4>God of War</h4>
-                                        <p>Xbox</p>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 col-sm-6 col-12">
-                                    <div class="btnsBox">
-                                        <div class="prices">
-                                            <span class="discount-rate">-60%</span><span
-                                                class="first-price">$10.49</span> <span class="last-price">$4.19</span>
-                                        </div>
-                                        <div class="btnsDiv"><button class="removeBtn">Remove</button> <button
-                                                class="addBtn">ADD TO CART</button></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="cardBox">
-                            <div class="row">
-                                <div class="col-4 col-sm-2 col-xl-2">
-                                    <div class="imgBox"><img 
-                                            src="./assets/img/game_image_6-300x450.jpg" alt=""></div>
-                                </div>
-                                <div class="col-xl-4 col-sm-4  col-8">
-                                    <div class="textBox">
-                                        <h4>God of War</h4>
-                                        <p>Xbox</p>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 col-sm-6 col-12">
-                                    <div class="btnsBox">
-                                        <div class="prices">
-                                            <span class="discount-rate">-60%</span><span
-                                                class="first-price">$10.49</span> <span class="last-price">$4.19</span>
-                                        </div>
-                                        <div class="btnsDiv"><button class="removeBtn">Remove</button> <button
-                                                class="addBtn">ADD TO CART</button></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
                         <div class="cardBox">
                             <div class="row">
                                 <div class="col-4 col-sm-2 col-xl-2">

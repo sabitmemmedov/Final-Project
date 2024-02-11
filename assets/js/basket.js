@@ -10,10 +10,12 @@ window.onload = () => {
 
 let nouser = document.getElementById("nouser");
 let yesuser = document.getElementById("yesuser");
-
+let showCardCount = document.getElementById("showCardCount")
 function checkUser() {
   user = JSON.parse(localStorage.getItem("user")) || [];
   if (user.length > 0) {
+    document.getElementById("usermail").innerHTML = user[0].email
+
     nouser.style.display = "none";
     yesuser.style.display = 'inline-block';
   } else {
@@ -45,6 +47,7 @@ let cardsBox = document.getElementById("cardsBox");
 
 function displayCart(data) {
   cardsBox.innerHTML = "";
+  showCardCount.innerHTML = data.length
   data.forEach(item => {
     cardsBox.innerHTML += `
       <div class="cardBox">
@@ -61,9 +64,10 @@ function displayCart(data) {
           <div class="col-xl-6 col-sm-6 col-12">
             <div class="btnsBox">
               <div class="prices">
-                <span class="discount-rate">-${item.discount}%</span>
-                <span class="first-price">$${item.price.toFixed(2)}</span>
-                <span class="last-price">$${(item.price * (1 - Number(item.discount) / 100)).toFixed(2)}</span>
+              ${item.discount === "" ? `<span class='last-price'>$${item.price.toFixed(2)}</span>` : `    <span class="discount-rate">-${item.discount}%</span>
+              <span class="first-price">$${item.price.toFixed(2)}</span>
+              <span class="last-price">$${(item.price * (1 - Number(item.discount) / 100)).toFixed(2)}</span> `}
+            
               </div>
               <div class="btnsDiv">
                 <button onclick="remove(${item.id})" class="removeBtn">Remove</button>
@@ -89,7 +93,7 @@ let subtotalPrice = document.getElementById("subtotalPrice");
 function checkPrice(data) {
   let totalPrice = 0;
   let totalSalePrice = 0;
-  
+
   data.forEach(item => {
     totalPrice += item.price;
     if (item.discount !== "") {

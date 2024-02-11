@@ -175,7 +175,7 @@ async function filtering(ctg, secTwoCards = document.getElementById("sec-two-car
               ${starIcons}
           </div>
           <div class="priceDiv">
-              ${item.discount === "" ? `<span>$${item.price.toFixed(2)} </span> ` : `<span>$${(item.price * (1 - Number(item.discount) / 100)).toFixed(2)} </span><span style='color:gray !important;text-decoration: line-through;'>$${item.price.toFixed(2)} </span> `}
+              ${item.discount === "" ? `<span >$${item.price.toFixed(2)} </span> ` : `<span>$${(item.price * (1 - Number(item.discount) / 100)).toFixed(2)} </span><span style='color:gray !important;text-decoration: line-through;'>$${item.price.toFixed(2)} </span> `}
           </div>
           <p class="description">${item.description}</p>
           <div class="btnsDiv">
@@ -292,7 +292,6 @@ async function getData() {
   await axios.get(`http://localhost:3000/games`)
     .then(res => {
       findData = res.data
-      // console.log(findData);
     })
 }
 
@@ -326,7 +325,7 @@ async function addBasket(id) {
       } else {
         postData.userId = check.id;
 
-        const uniqueId = getRandomInteger(1, 10000);
+        let uniqueId = getRandomInteger(1, 10000);
         postData.id = uniqueId.toString();
         try {
           const response = await axios.post(`http://localhost:3000/cart`, postData);
@@ -344,10 +343,48 @@ async function addBasket(id) {
 }
 
 
+async function addWish(id) {
+  var filterLocalee
+  let user = JSON.parse(localStorage.getItem("user")) || []
+  if (user.length > 0) {
+    let check = findUser.find((value) => user.find((setValue) => filterLocalee = value.id === setValue.id))
+    if (check) {
+      let cardData
+      await axios.get(`http://localhost:3000/wishlist?userId=${check.id}`)
+        .then(res => {
+          cardData = res.data
+        })
+      let postData = findData.find(item => item.id == id);
+
+      let checkCard = cardData.find(item => item.name == postData.name)
+      if (checkCard) {
+        alert("bu mehsuldan artiq elave olunub")
+      } else {
+        postData.userId = check.id;
+
+        let uniqueId = getRandomInteger(1, 10000);
+        postData.id = uniqueId.toString();
+        try {
+          const response = await axios.post(`http://localhost:3000/wishlist`, postData);
+          console.log(response);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+    }
+  }
+  else {
+    alert("Lütfen giriş yapın")
+  }
+}
+
+
+
+
+
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
-
-
 }
 
 
@@ -358,6 +395,7 @@ let yesuser = document.getElementById("yesuser")
 function checkUser() {
   let user = JSON.parse(localStorage.getItem("user")) || []
   if (user.length > 0) {
+    document.getElementById("usermail").innerHTML = user[0].email
     nouser.style.display = "none";
     yesuser.style.display = 'inline-block'
   } else {
