@@ -57,3 +57,41 @@
   font-size: 17px;
   font-weight: 500;
 }
+#section-hero .container-xl .section-hero-content .itemBox .textBox .btnsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#section-hero .container-xl .section-hero-content .itemBox .textBox .btnsBox button {
+  max-width: 200px;
+  height: 46px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+#section-hero .container-xl .section-hero-content .itemBox .textBox .btnsBox .addCart {
+  border: 2px solid #CD3D0F;
+  background-color: #CD3D0F;
+  color: #fff;
+}
+#section-hero .container-xl .section-hero-content .itemBox .textBox .btnsBox .addCart:hover {
+  background-color: #bc390d;
+}
+#section-hero .container-xl .section-hero-content .itemBox .textBox .btnsBox .addWish {
+  border: 2px solid gray;
+  background-color: transparent;
+  color: #fff;
+}
+#section-hero .container-xl .section-hero-content .itemBox .textBox .btnsBox .addWish:hover {
+  background-color: #161616;
+}
+#section-hero .container-xl .section-hero-content .itemBox .textBox .rankDiv {
+  display: flex;
+  gap: 1px;
+}
+#section-hero .container-xl .section-hero-content .itemBox .textBox .rankDiv i {
+  color: #262E36;
+  font-size: 14px;
+}
+#section-hero .container-xl .section-hero-content .itemBox .textBox .rankDiv .active {
+  color: #FEBF00;
+}

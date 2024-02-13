@@ -119,10 +119,10 @@ async function filtering(ctg, secTwoCards = document.getElementById("sec-two-car
       const starClass = i <= yellowStars ? "fa-solid fa-star active" : "fa-solid fa-star";
       starIcons += `<i class="${starClass}"></i>`;
     }
-    if (secTwoCards.id === "sec-two-cards" || secTwoCards.id === "resent-cards") {
+    secTwoCards.id === "sec-two-cards" || secTwoCards.id === "resent-cards"
       secTwoCards.innerHTML += `
       <li class="sec-two-card">
-      <div class="imgBox">
+      <div onclick="showDetails(${item.id})" class="imgBox">
           <img src=${item.url} alt="">
       </div>
       <div class="textBox">
@@ -156,39 +156,7 @@ async function filtering(ctg, secTwoCards = document.getElementById("sec-two-car
     </li>
   
       `
-    } else {
-      secTwoCards.innerHTML += `
-      
-      <li class="custom-sec-two-card">
-      <div class="imgBox">
-          <img src=${item.url} alt="">
-          <div class="imgBoxIcons" style="${item.discount === "" ? 'justify-content:end;' : 'justify-content: space-between;'}">
-             ${item.discount === "" ? "" : `<span>-${item.discount}%</span> `}
-             ${item.hot ? `<span>HOT</span>` : ""}
-          </div>
-      </div>
-      <div class="textDiv">
-          <h4>
-             ${item.name}
-          </h4>
-          <div class="iconsBox">
-              ${starIcons}
-          </div>
-          <div class="priceDiv">
-              ${item.discount === "" ? `<span >$${item.price.toFixed(2)} </span> ` : `<span>$${(item.price * (1 - Number(item.discount) / 100)).toFixed(2)} </span><span style='color:gray !important;text-decoration: line-through;'>$${item.price.toFixed(2)} </span> `}
-          </div>
-          <p class="description">${item.description}</p>
-          <div class="btnsDiv">
-              <button class="addBasket"><i class="fa-solid fa-cart-arrow-down"></i> Add to
-                  card</button>
-              <button class="addWish"><i class="fa-regular fa-heart"></i></button>
-          </div>
-      </div>
-  </li>
-      
-      
-      `
-    }
+    
 
   })
 }
@@ -412,3 +380,7 @@ function logout() {
 }
 
 
+function showDetails(id){
+  window.location.href = `detailpage.html?id=${id}`;
+
+}

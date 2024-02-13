@@ -69,6 +69,46 @@
                             font-weight: 500;
                         }
                     }   
+                    .btnsBox{
+                        display: flex;
+                        flex-direction: column  ;
+                        gap: 10px;
+                        button{
+                            max-width: 200px;
+                            height: 46px;
+                            border-radius: 6px;
+                            font-weight: 500;
+
+                        }
+                        .addCart{
+                            border: 2px solid #CD3D0F;
+                            background-color: #CD3D0F;
+                            color: #fff;
+                            &:hover{
+                                background-color: #bc390d;
+                            }
+                        }
+                        .addWish{
+                            border: 2px solid gray;
+                            background-color: transparent;
+                            color: #fff;
+                            &:hover{
+                                background-color: #161616;
+                            }
+                        }
+                    }
+                    .rankDiv{
+                        display: flex;
+                        gap: 1px;
+                        i {
+                            color: #262E36;
+                            font-size: 14px;
+                        }
+    
+                        .active {
+                            color: #FEBF00;
+                        }
+                    }
                 }
 
             }

@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "json-server": "^1.0.0-alpha.23"
+    "json-server": "^1.0.0-alpha.23",
+    "nodemailer": "^6.9.9"
   }
 }
