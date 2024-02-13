@@ -66,19 +66,30 @@
         <section id="section-hero">
             <div class="container-xl">
                 <div class="section-hero-content">
+                    <div class="contactInfo">
+                        <ul>
+                            <li><i class="fa-solid fa-phone"></i> +994 50 998 81 58</li>
+                            <li><i class="fa-regular fa-envelope"></i> gameshop@gmail.com</li>
+                            <li><i class="fa-solid fa-location-dot"></i> Bakı, Azərbaycan </li>
+
+                        </ul>
+                    </div>
                     <div class="contactFormBox">
                         <div class="title">
                             <h2>Contact Us</h2>
                         </div>
                         <form action="">
-                            <input placeholder="Enter Email" type="text" name="" id="">
-                            <input placeholder="Enter Name" type="text" name="" id=""> 
-                            <input placeholder="Enter Surname" type="text" name="" id="">
-                            <textarea placeholder="Your Message" name="" id="" cols="" rows="6"></textarea>
+                            <input placeholder="Enter Email" type="email" name="" id="email" required>
+                            <input placeholder="Enter Name" type="text" name="" id="name" required>
+                            <input placeholder="Enter Surname" type="text" name="" id="surname" required>
+                            <textarea placeholder="Your Message" name="" id="msg" cols="" rows="6"></textarea required>
                             <button type="submit">Send</button>
                         </form>
                     </div>
 
+                    <div id="mapid">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6060.500608729712!2d49.675005897361004!3d40.58023008417895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4030912b2cbbf477%3A0x6acc6600f49ba00e!2zU3VtcWF5xLF0IETDtnZsyZl0IFVuaXZlcnNpdGV0aQ!5e0!3m2!1saz!2saz!4v1707856835864!5m2!1saz!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
         </section>
@@ -104,11 +115,10 @@
 
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
+        crossorigin="anonymous"></script> 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
         integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/contact.js"></script>

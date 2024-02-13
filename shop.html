@@ -57,7 +57,7 @@
                                         <i class="fa-regular fa-user"></i>
                                         <span></span>
                                         <ul style="color: #00AFC0;" class="user-dropdown">
-                                            <li>sabitmammadov@gmail.com</li>
+                                            <li  id="usermail"></li>
                                             <li onclick="logout()">Log out</li>
                                         </ul>
                                     </a>
@@ -73,42 +73,42 @@
     <main>
         <section id="section-hero">
             <div class="container-xl">
+          
                 <div class="section-hero-content">
                     <div class="row">
                         <div class="col-xl-3 col-md-3 col-sm-12 mb-5">
                             <div class="filterBox">
                                 <div class="searchBox">
-                                    <input placeholder="Search..." type="text" name="" id=""><button><i
+                                    <input placeholder="Search..." type="text" name="" id="searchInp"><button id="searchBtn"><i
                                             class="fa-solid fa-magnifying-glass"></i></button>
                                 </div>
                                 <div class="platformBox">
                                     <span>Platform</span>
-                                    <select>
-                                        <option selected value="All">All</option>
+                                    <select id="platformSelect">
+                                        <option value="All">All</option>
                                         <option value="Xbox">Xbox</option>
                                         <option value="PC">PC</option>
                                         <option value="Playstation">Playstation</option>
                                     </select>
                                 </div>
                                 <div class="priceBox">
-                                    <select>
-                                        <option selected value="default">Price</option>
+                                    <span>Price</span>
+                                    <select id="priceSelect">
                                         <option value="ascending">Ascending price</option>
                                         <option value="descending">Descending price</option>
                                     </select>
                                 </div>
                             </div>
-
                         </div>
                         <div class="col-xl-9 col-md-9 col-sm-12">
                             <div class="productsBox">
                                 <ul id="products-cards" class="products-cards">
                                 </ul>
                             </div>
-
                         </div>
                     </div>
                 </div>
+                
             </div>
         </section>
     </main>

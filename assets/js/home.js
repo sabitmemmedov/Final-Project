@@ -345,6 +345,7 @@ async function addWish(id) {
   else {
     alert("Lütfen giriş yapın")
   }
+  return false
 }
 
 
@@ -384,3 +385,11 @@ function showDetails(id){
   window.location.href = `detailpage.html?id=${id}`;
 
 }
+
+
+
+
+
+
+
+

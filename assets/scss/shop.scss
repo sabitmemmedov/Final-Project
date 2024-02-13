@@ -289,12 +289,20 @@ header {
                         h4:hover {
                             color: #CD3D0F;
                         }
-
-                        span {
-                            color: #CD3D0F;
-                            font-weight: 500;
-
+                        .priceDiv{
+                            display: flex;
+                            gap: 10px;
+                            span {
+                                color: #CD3D0F;
+                                font-weight: 500;
+    
+                            }
+                            .first-price{
+                                color: rgba(178, 177, 177, 0.555) !important;
+                                text-decoration: line-through;
+                            }
                         }
+                     
                     }
 
                     .iconsBox {

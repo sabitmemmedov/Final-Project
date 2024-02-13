@@ -232,9 +232,17 @@ header .navbar-text .icons-div .iconDiv a ul li:hover {
 #section-hero .section-hero-content .productsBox .products-cards .product-card .textBox h4:hover {
   color: #CD3D0F;
 }
-#section-hero .section-hero-content .productsBox .products-cards .product-card .textBox span {
+#section-hero .section-hero-content .productsBox .products-cards .product-card .textBox .priceDiv {
+  display: flex;
+  gap: 10px;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .textBox .priceDiv span {
   color: #CD3D0F;
   font-weight: 500;
+}
+#section-hero .section-hero-content .productsBox .products-cards .product-card .textBox .priceDiv .first-price {
+  color: rgba(178, 177, 177, 0.555) !important;
+  text-decoration: line-through;
 }
 #section-hero .section-hero-content .productsBox .products-cards .product-card .iconsBox {
   padding: 10px 20px 30px 20px;

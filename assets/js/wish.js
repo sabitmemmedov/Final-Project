@@ -139,7 +139,7 @@ async function addBasket(id) {
       }
     }
     else {
-      alert("Lütfen giriş yapın");
+      alert("Giriş edin");
     }
   }
   
