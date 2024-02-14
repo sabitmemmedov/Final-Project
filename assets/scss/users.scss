@@ -1,0 +1,43 @@
+header {
+    background-color: #00080F;
+
+    .nav-item {
+        color: #fff !important;
+
+        .active {
+            color: #CD3D0F !important;
+        }
+
+        a {
+            color: #fff;
+            font-size: 20px;
+
+            &:hover {
+                color: #CD3D0F !important;
+            }
+        }
+
+    }
+}
+
+#section-hero{
+    color: #fff;
+    background-color: #121212;
+    padding: 40px 0;
+    min-height: 93vh;
+    .section-hero-content{
+        .usersBox{
+            display: flex;
+
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            .userBox{
+                width:300px;
+                padding: 10px;
+                border-radius: 6px;
+                background-color: #202020;
+            }
+        }
+    }
+}

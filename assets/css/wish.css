@@ -122,6 +122,18 @@ header .navbar-text .icons-div .iconDiv a ul li:hover {
 #section-hero .section-hero-content .section-head-text h1 {
   color: #fff;
 }
+#section-hero .section-hero-content .noItem {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+#section-hero .section-hero-content .noItem h2 {
+  text-align: center;
+}
 #section-hero .section-hero-content .section-cards {
   display: flex;
   flex-direction: column;

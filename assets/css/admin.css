@@ -1,0 +1,108 @@
+header {
+  background-color: #00080F;
+}
+header .nav-item {
+  color: #fff !important;
+}
+header .nav-item .active {
+  color: #CD3D0F !important;
+}
+header .nav-item a {
+  color: #fff;
+  font-size: 20px;
+}
+header .nav-item a:hover {
+  color: #CD3D0F !important;
+}
+
+#section-hero {
+  color: #fff;
+  background-color: #121212;
+  padding: 40px 0;
+  min-height: 93vh;
+}
+#section-hero .section-hero-content {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+#section-hero .section-hero-content .formBox {
+  padding: 40px;
+  background-color: #202020;
+  width: 800px;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+#section-hero .section-hero-content .formBox .form-title {
+  padding: 20px;
+}
+#section-hero .section-hero-content .formBox form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#section-hero .section-hero-content .formBox form input {
+  height: 45px;
+  border-radius: 6px;
+  border: 1px solid #CD3D0F;
+  background-color: transparent;
+  outline: 0;
+  color: #fff;
+  padding: 5px 16px;
+}
+#section-hero .section-hero-content .formBox form button {
+  height: 40px;
+  border: 0;
+  outline: 0;
+  background-color: #CD3D0F;
+  color: 0;
+  font-weight: 500;
+  font-size: 17px;
+  border-radius: 6px;
+  color: #fff;
+}
+#section-hero .section-hero-content .formBox form select {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #CD3D0F;
+  border-radius: 6px;
+  height: 45px;
+  padding: 5px 16px;
+}
+#section-hero .section-hero-content .formBox form select option {
+  background-color: #202020;
+  color: #fff;
+}
+#section-hero .section-hero-content .gamesBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#section-hero .section-hero-content .gamesBox .gameBox {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: #202020;
+}
+#section-hero .section-hero-content .gamesBox .gameBox img {
+  width: 100%;
+}
+#section-hero .section-hero-content .gamesBox .gameBox button {
+  border: 0;
+  width: 100px;
+  height: 30px;
+  background-color: #CD3D0F;
+  color: #fff;
+}
+
+@media screen and (max-width: 801px) {
+  #section-hero .section-hero-content .formBox {
+    width: 100%;
+    padding: 10px;
+  }
+  #section-hero .section-hero-content .formBox form {
+    padding: 0;
+  }
+}

@@ -50,8 +50,16 @@
                         <span class="navbar-text">
                             <div class="icons-div">
                                 <div class="iconDiv">
-                                    <a href="./login.html">
+                                    <a id="nouser" href="./login.html">
                                         <i class="fa-regular fa-user"></i>
+                                    </a>
+                                    <a id="yesuser" href="#">
+                                        <i class="fa-regular fa-user"></i>
+                                        <span></span>
+                                        <ul style="color: #00AFC0;" class="user-dropdown">
+                                            <li  id="usermail"></li>
+                                            <li onclick="logout()">Log out</li>
+                                        </ul>
                                     </a>
                                 </div>
 

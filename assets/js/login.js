@@ -21,13 +21,12 @@ async function checkUser(e) {
         let user = JSON.parse(localStorage.getItem("user")) || [];
         user.push(checkEmail);
         localStorage.setItem("user", JSON.stringify(user));
-        console.log("Hoş geldiniz!", checkEmail.name);
         window.location.href = "./home.html";
     } else {
-        emailInput.style.borderColor = "red"; // Kırmızı renkde border ekleniyor
-        passwordInput.style.borderColor = "red"; // Kırmızı renkde border ekleniyor
-        emailInput.placeholder = "Wrong email"; // Yanlış email placeholder'ı
-        passwordInput.placeholder = "Wrong password"; // Yanlış parola placeholder'ı
+        emailInput.style.borderColor = "red"; 
+        passwordInput.style.borderColor = "red"; 
+        emailInput.placeholder = "Wrong email";
+        passwordInput.placeholder = "Wrong password"; 
     }
     form.reset();
 }

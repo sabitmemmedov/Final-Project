@@ -152,6 +152,19 @@ header {
 
             }
         }
+        .noItem{
+            // display: flex;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            min-height: 40vh;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            h2{
+                text-align: center;
+            }
+        }
         .section-cards{
             display: flex;
             flex-direction: column;
