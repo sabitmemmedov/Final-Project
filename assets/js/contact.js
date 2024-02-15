@@ -10,15 +10,14 @@ window.onload = function() {
         var message = document.getElementById("msg").value;
 
         if (email.trim() === "" || name.trim() === "" || surname.trim() === "" || message.trim() === "") {
-            alert("Lütfen tüm alanları doldurun.");
+            alert("Butun inputlari doldurun");
             return;
         }
 
-        // Random ID oluştur
         var randomId = generateRandomId();
 
         var postData = {
-            id: randomId, // Random ID atanıyor
+            id: randomId, 
             email: email,
             name: name,
             surname: surname,
@@ -29,13 +28,12 @@ window.onload = function() {
             var response = await axios.post("http://localhost:3000/contact", postData);
 
             if (response.status === 200) {
-                alert("Mesaj başarıyla gönderildi.");
                 form.reset();
             } else {
-                throw new Error("Mesaj gönderilirken bir hata oluştu.");
+                throw new Error("Xeta");
             }
         } catch (error) {
-            console.error("Hata:", error);
+            console.error( error);
         }
     });
 
@@ -63,14 +61,12 @@ function logout() {
     window.location.reload();
 }
 
-// Rastgele bir ID üretme fonksiyonu
 function generateRandomId() {
-    var chars = '123456789'; // ID rakamlardan oluşmalı ve 0 ile başlamamalı
-    var idLength = 8; // ID uzunluğu
+    var chars = '123456789'; 
+    var idLength = 8; 
     var id = '';
     for (var i = 0; i < idLength; i++) {
         var randomIndex = Math.floor(Math.random() * chars.length);
-        // İlk karakter 0 olmamalı
         if (i === 0 && randomIndex === 0) {
             randomIndex = 1;
         }

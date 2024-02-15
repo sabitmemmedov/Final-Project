@@ -41,7 +41,7 @@ function getCart() {
         noItem(res.data);
       })
       .catch(error => {
-        console.error("Error fetching cart:", error);
+        console.error( error);
       });
   }
 }
@@ -52,7 +52,7 @@ function displayCart(data) {
   cardsBox.innerHTML = "";
   showCardCount.innerHTML = data.length;
   if (data.length > 0) {
-    document.querySelector(".section-main-content").style.display = "block"; // Eğer ürünler varsa ana içerik bölümünü göster
+    document.querySelector(".section-main-content").style.display = "block"; 
     data.forEach(item => {
       cardsBox.innerHTML += `
         <div class="cardBox">
@@ -123,12 +123,11 @@ async function deleteCartItemsByUserId(userId) {
 
     for (const item of cartItems) {
       await axios.delete(`http://localhost:3000/cart/${item.id}`);
-      console.log(`Cart item with id ${item.id} deleted.`);
+      console.log(item.id);
     }
 
-    console.log("All cart items deleted successfully.");
   } catch (error) {
-    console.error("Error deleting cart items:", error);
+    console.error(error);
   }
 }
 
@@ -146,19 +145,17 @@ function showOrderModal() {
     textBox.style.display = "none";
 
     setTimeout(async function () {
-      gifBox.style.display = "none"; // GifBox gizlenir
-      textBox.style.display = "flex"; // TextBox görünür hale gelir
+      gifBox.style.display = "none"; 
+      textBox.style.display = "flex"; 
 
-      // 3 saniye sonra silme işlemi gerçekleştirilir
       setTimeout(async function () {
-        // Modal kapanmadan önce bekle
         await deleteCartItemsByUserId(userId);
 
         setTimeout(function () {
           orderModal.style.display = "none";
-        }, 2000); // 2 saniye sonra
+        }, 2000); 
       }, 3000); 
-    }, 3000); // GifBox 3 saniye boyunca görünür, TextBox gizlidir
+    }, 3000);
   });
 }
 function noItem(data) {

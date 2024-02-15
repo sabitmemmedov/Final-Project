@@ -31,5 +31,4 @@ async function checkUser(e) {
     form.reset();
 }
 
-// Form submit olayı dinleniyor
 form.addEventListener("submit", checkUser);

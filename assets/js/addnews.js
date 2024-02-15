@@ -3,13 +3,10 @@ document.getElementById("btn").addEventListener("click", function () {
     const description = document.getElementById("description").value;
     const url = document.getElementById("url").value;
 
-    // Generate random ID with digits
-    const randomId = generateRandomId(10); // 10 karakter uzunluğunda bir ID oluşturur
+    const randomId = generateRandomId(10); 
 
-    // Add current date
     const date = new Date().toISOString();
 
-    // Create data object
     const data = {
         id: randomId,
         title: newsTitle,
@@ -18,11 +15,9 @@ document.getElementById("btn").addEventListener("click", function () {
         date: date
     };
 
-    // Post data using Axios
     axios.post("http://localhost:3000/news", data)
 });
 
-// Function to generate random ID with digits
 function generateRandomId(length) {
     let result = '';
     const characters = '123456789';

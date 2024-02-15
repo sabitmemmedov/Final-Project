@@ -212,10 +212,45 @@
       "name": "Sabit",
       "surname": "Memmedov",
       "password": "sabit"
+    },
+    {
+      "id": "44995464",
+      "email": "firudin@gmail.com",
+      "name": "edq",
+      "surname": "ddqwdqw",
+      "password": "dqwdq"
     }
   ],
-  "cart": [],
-  "wishlist": [],
+  "cart": [
+    {
+      "id": "8163",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyEpFX4rbBw3LEGSsP6tISnxQ3wsUvKc1asw&usqp=CAU",
+      "name": "PUBG",
+      "price": 49,
+      "rank": 1,
+      "date": "2024-01-05T20:31:16.142Z",
+      "hot": true,
+      "discount": "50",
+      "platform": "PC",
+      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring.",
+      "userId": "47749178"
+    }
+  ],
+  "wishlist": [
+    {
+      "id": "9948",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyEpFX4rbBw3LEGSsP6tISnxQ3wsUvKc1asw&usqp=CAU",
+      "name": "PUBG",
+      "price": 49,
+      "rank": 1,
+      "date": "2024-01-05T20:31:16.142Z",
+      "hot": true,
+      "discount": "50",
+      "platform": "PC",
+      "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring.",
+      "userId": "47749178"
+    }
+  ],
   "contact": [],
   "news": [
     {

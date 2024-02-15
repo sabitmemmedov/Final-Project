@@ -52,7 +52,7 @@ async function addBasket(id) {
     try {
         const user = JSON.parse(localStorage.getItem("user"));
         if (!user || user.length === 0) {
-            alert("Giriş yapınız");
+            alert("Giriş ediniz!");
             return;
         }
 
@@ -80,7 +80,7 @@ async function addWish(id) {
     try {
         const user = JSON.parse(localStorage.getItem("user"));
         if (!user || user.length === 0) {
-            alert("Giriş yapınız");
+            alert("Giriş ediniz");
             return;
         }
 
@@ -91,17 +91,16 @@ async function addWish(id) {
         const checkWish = wishData.find(item => item.name === postData.data.name);
 
         if (checkWish) {
-            alert("Bu ürün zaten dilek listenizde!");
+            alert("Bu mehsul elave olunub artiq");
         } else {
             postData.data.userId = userId;
             const uniqueId = getRandomInteger(1, 10000);
             postData.data.id = uniqueId.toString();
             await axios.post(`http://localhost:3000/wishlist`, postData.data);
             console.log(postData.data);
-            alert("Ürün dilek listenize eklendi!");
         }
     } catch (error) {
-        console.error("Hata:", error);
+        console.error( error);
     }
 }
 

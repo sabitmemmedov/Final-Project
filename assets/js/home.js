@@ -306,7 +306,7 @@ async function addBasket(id) {
     }
   }
   else {
-    alert("Lütfen giriş yapın")
+    alert("Giris edin")
   }
 }
 
@@ -343,7 +343,7 @@ async function addWish(id) {
     }
   }
   else {
-    alert("Lütfen giriş yapın")
+    alert("Giris edin")
   }
   return false
 }

@@ -1,6 +1,3 @@
-
-
-// HTML elementlerini değişkenlere atayalım
 const notUserElement = document.getElementById("notuser");
 const yesUserElement = document.getElementById("yesuser");
 const userMailElement = document.getElementById("usermail");
@@ -10,7 +7,6 @@ const priceSelectElement = document.getElementById('priceSelect');
 const searchInpElement = document.getElementById('searchInp');
 const searchBtnElement = document.getElementById('searchBtn');
 
-// Kullanıcıyı kontrol etme fonksiyonunu tek bir yerde kullanalım
 function checkUser() {
   const user = JSON.parse(localStorage.getItem("user")) || [];
   if (user.length > 0) {
@@ -23,13 +19,11 @@ function checkUser() {
   }
 }
 
-// Kullanıcı oturumunu sonlandırma fonksiyonu
 function logout() {
   localStorage.removeItem('user');
   checkUser();
 }
 
-// Oyun verilerini alma işlemlerini yeniden düzenleyelim
 async function getData(url) {
   try {
     const response = await axios.get(url);
@@ -40,7 +34,6 @@ async function getData(url) {
   }
 }
 
-// Kullanıcı verilerini alma işlemlerini yeniden düzenleyelim
 async function getUsers(url) {
   try {
     const response = await axios.get(url);
@@ -51,9 +44,8 @@ async function getUsers(url) {
   }
 }
 
-// Filtreleme ve oyunları görüntüleme işlemlerini tek bir fonksiyonda birleştirelim
 function filterAndDisplayGames() {
-  let filteredGames = gamesData.slice(); // Kopya oluşturalım
+  let filteredGames = gamesData.slice(); 
   const platform = platformSelectElement.value;
   const priceOrder = priceSelectElement.value;
 
@@ -70,7 +62,6 @@ function filterAndDisplayGames() {
   displayGames(filteredGames);
 }
 
-// Oyunları ekranda görüntüleme fonksiyonunu yeniden düzenleyelim
 function displayGames(filteredGames) {
   productsCartElement.innerHTML = filteredGames.map(item => `
     <li class="product-card">
@@ -105,7 +96,6 @@ function displayGames(filteredGames) {
     </li>`).join('');
 }
 
-// Arama işlevini tek bir fonksiyonda toplayalım
 function handleSearch() {
   const searchTerm = searchInpElement.value.trim().toLowerCase();
   if (searchTerm === "") {
@@ -116,24 +106,20 @@ function handleSearch() {
   }
 }
 
-// Sayfa yüklendiğinde yapılacak işlemleri tek bir yerde toplayalım
 window.onload = async () => {
   gamesData = await getData(`http://localhost:3000/games`);
   findUser = await getUsers(`http://localhost:3000/users`);
   filterAndDisplayGames();
   checkUser()
-  // Dinamik olarak eklenen öğeler için etkinlik dinleyicilerini ayarlayalım
   platformSelectElement.addEventListener('change', filterAndDisplayGames);
   priceSelectElement.addEventListener('change', filterAndDisplayGames);
   searchBtnElement.addEventListener('click', handleSearch);
 }
 
-// Detayları göster fonksiyonunu taşıyalım
 function showDetails(id) {
   window.location.href = `detailpage.html?id=${id}`;
 }
 
-// Sepete ekle işlemini gerçekleştirelim
 async function addToCart(id) {
   const user = JSON.parse(localStorage.getItem("user")) || [];
   if (user.length > 0) {
@@ -147,7 +133,7 @@ async function addToCart(id) {
       const postData = gamesData.find(item => item.id == id);
       const checkCard = cardData.find(item => item.name == postData.name);
       if (checkCard) {
-        alert("Bu ürün zaten eklenmiş");
+        alert("Bu mehsul onceden elave olunub");
       } else {
         postData.userId = check.id;
         const uniqueId = getRandomInteger(1, 10000);
@@ -178,7 +164,7 @@ async function addToWishlist(id) {
       const postData = gamesData.find(item => item.id == id);
       const checkItem = wishlistData.find(item => item.name == postData.name);
       if (checkItem) {
-        alert("Bu ürün zaten istek listesinde");
+        alert("Bu mehsul onceden elave edilib");
       } else {
         postData.userId = check.id;
         const uniqueId = getRandomInteger(1, 10000);
