@@ -316,6 +316,15 @@ footer {
             }
         }
     }
+    #section-hero {
+        .section-hero-content {
+            .contactFormBox {
+                border-radius: 6px;
+                padding: 20px 10px;
+            }
+        }
+    }
+    
 }
 
 @media screen and (max-width:991px) {

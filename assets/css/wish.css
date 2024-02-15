@@ -130,6 +130,7 @@ header .navbar-text .icons-div .iconDiv a ul li:hover {
   color: #fff;
   width: 100%;
   text-align: center;
+  flex-wrap: wrap;
 }
 #section-hero .section-hero-content .noItem h2 {
   text-align: center;

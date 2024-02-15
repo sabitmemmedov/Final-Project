@@ -1,0 +1,39 @@
+body{
+    background-color: #081018;
+    #section-hero{
+        padding: 40px 0;
+        .section-hero-content{
+            position: relative;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #182028;
+            color: #fff;
+            .back{
+                top: 10px;
+                right: 10px;
+                position: absolute;
+                color: #CD3D0F;
+                i{
+                    font-size: 30px;
+                }
+            }
+            .itemBox{
+                img{
+                    width: 100%;
+                }
+                .titleDiv{
+                    padding: 20px 0;
+                    margin-bottom: 20px;
+                    border-bottom: 1px solid rgba(128, 128, 128, 0.415);
+                    h4{
+                        color:  #CD3D0F;
+                    }
+                }
+                .textBox{
+                    padding-top: 20px;
+                }
+            }
+        }
+    }       
+  
+}

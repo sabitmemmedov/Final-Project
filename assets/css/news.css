@@ -120,82 +120,49 @@ header .navbar-text .icons-div .iconDiv a ul li:hover {
   flex-direction: column;
   gap: 50px;
 }
-#section-hero .section-hero-content .contactFormBox {
-  border-radius: 6px;
-  padding: 60px 30px;
-  background-color: #202020;
-  max-width: 800px;
-  margin: 0 auto;
-  width: 100%;
-}
-#section-hero .section-hero-content .contactFormBox .title {
-  padding: 20px 0;
-}
-#section-hero .section-hero-content .contactFormBox .title h2 {
-  color: #fff;
-}
-#section-hero .section-hero-content .contactFormBox form {
+#section-hero .section-hero-content .newsBox {
   display: flex;
-  gap: 20px;
   flex-direction: column;
+  gap: 40px;
+}
+#section-hero .section-hero-content .newsBox .newsItem {
+  padding: 6px 6px 20px 6px;
+  border-radius: 6px;
+  background-color: #182028;
+}
+#section-hero .section-hero-content .newsBox .newsItem .imgBox img {
   width: 100%;
-}
-#section-hero .section-hero-content .contactFormBox form input {
-  color: #fff;
-  width: 100%;
-  border: 1px solid #fff;
-  outline: 0;
-  background-color: transparent;
-  height: 45px;
-  border-radius: 6px;
-  padding: 0 20px;
-}
-#section-hero .section-hero-content .contactFormBox form input:focus {
-  border: 1px solid #CD3D0F;
-  outline: none;
-}
-#section-hero .section-hero-content .contactFormBox form textarea {
-  padding: 10px 20px;
-  background-color: transparent;
-  border-radius: 6px;
-  border: 1px solid #fff;
-  color: #fff;
-  outline: none;
-}
-#section-hero .section-hero-content .contactFormBox form textarea:focus {
-  border: 1px solid #CD3D0F;
-}
-#section-hero .section-hero-content .contactFormBox form button {
-  height: 45px;
-  color: #fff;
-  background-color: #CD3D0F;
-  font-weight: 500;
-  border: 0;
   border-radius: 6px;
 }
-#section-hero .section-hero-content .contactInfo {
-  padding: 40px 0;
-  color: #fff;
+#section-hero .section-hero-content .newsBox .newsItem .textBox {
+  padding-right: 10px;
 }
-#section-hero .section-hero-content .contactInfo ul {
-  padding: 0;
-  margin: 0;
-}
-#section-hero .section-hero-content .contactInfo ul li {
-  list-style: none;
-  font-size: 20px;
-}
-#section-hero .section-hero-content .contactInfo ul li i {
-  width: 30px;
+#section-hero .section-hero-content .newsBox .newsItem .textBox h3 {
   color: #CD3D0F;
 }
-#section-hero .section-hero-content #mapid {
-  height: 400px;
-  width: 100%;
+#section-hero .section-hero-content .newsBox .newsItem .textBox span {
+  color: gray;
 }
-#section-hero .section-hero-content #mapid iframe {
-  width: 100%;
-  height: 100%;
+#section-hero .section-hero-content .newsBox .newsItem .textBox p {
+  color: #cccccc;
+  font-size: 19px;
+  font-weight: 400;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 140px;
+  overflow: hidden;
+}
+#section-hero .section-hero-content .newsBox .newsItem .textBox button {
+  border: 1px solid #b9b9b9;
+  background-color: transparent;
+  width: 142px;
+  height: 50px;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+#section-hero .section-hero-content .newsBox .newsItem .textBox button:hover {
+  background-color: #CD3D0F;
 }
 
 footer {
@@ -253,10 +220,6 @@ footer .footer-content ul li a:hover {
 @media screen and (max-width: 560px) {
   header .navbar-brand img {
     width: 169px;
-  }
-  #section-hero .section-hero-content .contactFormBox {
-    border-radius: 6px;
-    padding: 20px 10px;
   }
 }
 @media screen and (max-width: 991px) {

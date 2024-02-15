@@ -205,10 +205,41 @@
       "description": "Enter a dark fantasy world crafted by Hidetaka Miyazaki and George R. R. Martin. Unravel the mysteries, face formidable enemies, and discover the power of the Elden Ring."
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "id": "47749178",
+      "email": "sabitmemmedof@gmail.com",
+      "name": "Sabit",
+      "surname": "Memmedov",
+      "password": "sabit"
+    }
+  ],
   "cart": [],
   "wishlist": [],
   "contact": [],
+  "news": [
+    {
+      "id": "1",
+      "url": "https://hex-wp.com/gameshop/wp-content/uploads/2023/09/blog_image_1.jpg",
+      "title": "Great White Shark Nursery Found in Waters Off Montauk",
+      "description": "Sed elementum lorem et quam volutpat viverra mollis at mi. In rutrum sagittis ligula, dapibus porttitor nisl posuere in. Suspendisse pulvinar massa nibh. Duis scelerisque diam vel dui mattis commodo. Curabitur euismod mi sed massa placerat placerat. Sed non orci ac neque tincidunt eleifend. Vivamus ac nisl elit. Donec interdum, felis aliquet pretium semper, magna odio elementum eros, vel volutpat nisl libero sed erat. Donec lobortis consequat orci, in malesuada ante aliquam nec. Nullam sed metus vitae nisi bibendum tristique ut nec mi. Sed euismod tincidunt mauris, sed fermentum mauris gravida et. Morbi posuere suscipit velit, et pulvinar ante convallis vitae. Sed lacinia lorem non felis adipiscing sodales vitae tempus tortor. malesuada. In hac habitasse platea dictumst. Integer felis ipsum, laoreet in gravida in, vehicula vitae tortor. Curabitur vestibulum nisi metus, ac auctor ligula. Morbi egestas odio tincidunt mauris dictum non faucibus ipsum ornare.",
+      "date": "2023-12-05T20:31:16.142Z"
+    },
+    {
+      "id": "2",
+      "url": "https://hex-wp.com/gameshop/wp-content/uploads/2023/09/blog_image_2.jpg",
+      "title": "At Solmen va Essern Neceasi the Angleso Grammatica",
+      "description": " Curabitur euismod mi sed massa placerat placerat. Sed non orci ac nequeSed iam vel dui mattis commodo. tincidunt eleifend. Vivamus ac nisl elit. Donec interdum, felis aliquet pretium semper, magna odio elementum eros, vel volutpat nisl libero sed erat. Donec lobortis consequat orci, in malesuada ante aliquam nec. Nullam sed metus vitae nisi bibendum tristique ut nec mi. Sed euismod tincidunt mauris, sed fermentum mauris gravida et. Morbi posuere suscipit velit, et pulvinar ante convallis vitae. Sed lacinia lorem non felis adipiscing sodales vitae tempus tortor.cibus ipsum ornare.",
+      "date": "2023-11-22T20:31:16.142Z"
+    },
+    {
+      "id": "3",
+      "url": "https://hex-wp.com/gameshop/wp-content/uploads/2023/09/blog_image_3.jpg",
+      "title": "I Really Belive that if You Prectice Eneugh You Cauld",
+      "description": "Pat viverra mollis at mi. In rutru Sed elementum lorem et quam volutpat viverra mollis at mi. In rutrum sagittis ligula, dapibus porttitor nisl posuere in. Suspendisse pulvinar massa nibh. Duis scelerisque diam vel dui mattis commodo. Curabitur euismod mi sed massa placerat placerat. Sed non orci ac neque tincidunt eleifend. Vivamus ac nisl elit. Donec interdum, felis aliquet pretium semper, magna odio elementum eros, vel volutpat nisl libero sed erat. Donec lobortis consequat orci, in malesuada ante aliquam nec. Nullam sed metus vitae nisi bibendum tristique ut nec mi. Sed euismod tincidunt mauris, sed fermentum mauris gravida et. Morbi posuere suscipit velit, et pulvinar ante convallis vitae. Sed lacinia lorem non felis adipiscing sodales vitae tempus tortor. malesuada. In hac habitasse platea dictumst. Integer felis ipsum, laoreet in gravida in, vehicula vitae tortor. Curabitur vestibulum nisi metus, ac auctor ligula. Morbi egestas odio tincidunt mauris dictum non faucibus ipsum ornare.",
+      "date": "2024-10-20T20:31:16.142Z"
+    }
+  ],
   "profile": {
     "name": "typicode"
   }

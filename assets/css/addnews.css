@@ -1,0 +1,131 @@
+header {
+  background-color: #00080F;
+}
+header .nav-item {
+  color: #fff !important;
+}
+header .nav-item .active {
+  color: #CD3D0F !important;
+}
+header .nav-item a {
+  color: #fff;
+  font-size: 20px;
+}
+header .nav-item a:hover {
+  color: #CD3D0F !important;
+}
+
+#section-hero {
+  color: #fff;
+  background-color: #121212;
+  padding: 40px 0;
+  min-height: 93vh;
+}
+#section-hero .section-hero-content {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+#section-hero .section-hero-content .formBox {
+  padding: 40px;
+  background-color: #202020;
+  width: 800px;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+#section-hero .section-hero-content .formBox .form-title {
+  padding: 20px;
+}
+#section-hero .section-hero-content .formBox form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#section-hero .section-hero-content .formBox form input {
+  height: 45px;
+  border-radius: 6px;
+  border: 1px solid #CD3D0F;
+  background-color: transparent;
+  outline: 0;
+  color: #fff;
+  padding: 5px 16px;
+}
+#section-hero .section-hero-content .formBox form button {
+  height: 40px;
+  border: 0;
+  outline: 0;
+  background-color: #CD3D0F;
+  color: 0;
+  font-weight: 500;
+  font-size: 17px;
+  border-radius: 6px;
+  color: #fff;
+}
+#section-hero .section-hero-content .newsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+#section-hero .section-hero-content .newsBox .newsItem {
+  padding: 6px 6px 20px 6px;
+  border-radius: 6px;
+  background-color: #182028;
+}
+#section-hero .section-hero-content .newsBox .newsItem .imgBox img {
+  width: 100%;
+  border-radius: 6px;
+}
+#section-hero .section-hero-content .newsBox .newsItem .textBox {
+  padding-right: 10px;
+}
+#section-hero .section-hero-content .newsBox .newsItem .textBox h3 {
+  color: #CD3D0F;
+}
+#section-hero .section-hero-content .newsBox .newsItem .textBox span {
+  color: gray;
+  padding-right: 10px;
+}
+#section-hero .section-hero-content .newsBox .newsItem .textBox p {
+  color: #cccccc;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 140px;
+  overflow: hidden;
+}
+#section-hero .section-hero-content .newsBox .newsItem .textBox button {
+  border: 1px solid #b9b9b9;
+  background-color: transparent;
+  width: 142px;
+  height: 50px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+#section-hero .section-hero-content .newsBox .newsItem .textBox button:hover {
+  background-color: #CD3D0F;
+}
+
+@media screen and (max-width: 801px) {
+  #section-hero {
+    color: #fff;
+    background-color: #121212;
+    padding: 40px 0;
+    min-height: 93vh;
+  }
+  #section-hero .section-hero-content {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+  }
+  #section-hero .section-hero-content .formBox {
+    padding: 10px;
+    background-color: #202020;
+    width: 100%;
+  }
+  #section-hero .section-hero-content .formBox form {
+    padding: 10px;
+  }
+}

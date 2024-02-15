@@ -1,0 +1,36 @@
+body {
+  background-color: #081018;
+}
+body #section-hero {
+  padding: 40px 0;
+}
+body #section-hero .section-hero-content {
+  position: relative;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #182028;
+  color: #fff;
+}
+body #section-hero .section-hero-content .back {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  color: #CD3D0F;
+}
+body #section-hero .section-hero-content .back i {
+  font-size: 30px;
+}
+body #section-hero .section-hero-content .itemBox img {
+  width: 100%;
+}
+body #section-hero .section-hero-content .itemBox .titleDiv {
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.415);
+}
+body #section-hero .section-hero-content .itemBox .titleDiv h4 {
+  color: #CD3D0F;
+}
+body #section-hero .section-hero-content .itemBox .textBox {
+  padding-top: 20px;
+}

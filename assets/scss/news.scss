@@ -28,7 +28,8 @@ header {
             transition: ease-in-out 0.3s;
             font-size: 18px;
             font-weight: 600;
-            span{
+
+            span {
                 color: #fff;
                 font-size: 14px;
                 font-weight: 300;
@@ -70,23 +71,27 @@ header {
 
             .iconDiv {
                 position: relative;
-                a{
-                    &:hover ul{
+
+                a {
+                    &:hover ul {
                         display: flex;
                     }
+
                     i {
                         font-size: 28px;
                         color: #fff;
                         transition: ease-in-out 0.3s;
                     }
-                    .active{
+
+                    .active {
                         color: #CD3D0F;
                     }
+
                     i:hover {
                         color: #CD3D0F;
                         transition: ease-in-out 0.3s;
                     }
-    
+
                     span {
                         font-size: 14px;
                         right: 0px;
@@ -101,32 +106,34 @@ header {
                         height: 10px;
                         border-radius: 50%;
                     }
-    
-                    ul{
+
+                    ul {
                         display: none;
                         flex-direction: column;
                         gap: 20px;
-                        background-color:#18181C;
+                        background-color: #18181C;
                         position: absolute;
                         top: 30px;
-    
+
                         z-index: 12;
                         padding: 30px 15px;
                         border-radius: 6px;
                         margin: 0;
-                        li{
+
+                        li {
                             list-style: none;
                             font-size: 16px;
                             font-weight: 500;
                             color: #fff;
-                            &:hover{
+
+                            &:hover {
                                 color: #E0232D;
                             }
                         }
                     }
-                 
+
                 }
-                
+
             }
 
         }
@@ -134,138 +141,76 @@ header {
     }
 }
 
-
-
-
-
-#section-hero{
-    padding: 40px 0;
-    font-family: 'Roboto', sans-serif;
-
+#section-hero {
     min-height: 81vh;
-    background-color: #121212;
-    .section-hero-content{
-        .section-head-text{
-            padding: 40px 0; 
-            h1{
-                color: #fff;
+    background-color: #081018;
+    padding: 40px 0;
 
-            }
-        }
-        .noItem{
-            // display: flex;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            min-height: 40vh;
-            color: #fff;
-            width: 100%;
-            text-align: center;
-            flex-wrap: wrap;
-            h2{
-                text-align: center;
-            }
-        }
-        .section-cards{
+    .section-hero-content {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .newsBox {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            .cardBox{
-                padding: 10px;
-                background-color: #202020;
+            gap: 40px;
+            .newsItem {
+                padding: 6px 6px 20px 6px;
                 border-radius: 6px;
-                .imgBox{
-                    img{
+                background-color: #182028;
+
+                .imgBox {
+                    img {
+                        width: 100%;
                         border-radius: 6px;
-                        height: 100%;
-                        width:100%;
-                        // height: 220px !important;
                     }
                 }
-                .textBox{
-                    h4{
+
+                .textBox {
+                    padding-right: 10px;
+                    h3 {
+                        color: #CD3D0F;
+                    }
+                    span{
+                        color: gray;
+                    }
+                    p {
+                        color: #cccccc;
+                        font-size: 19px;
+                        font-weight: 400;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        height: 140px;
+                        overflow: hidden;
+                    }
+
+                    button {
+                        border: 1px solid #b9b9b9;
+                        background-color: transparent;
+                        width: 142px;
+                        height: 50px;
+                        border-radius: 25px;
                         color: #fff;
-                    }
-                    p{
-                        color: #f5f5f599 !important;
-                    }
-                }
-                .btnsBox{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: end;
-                    height: 100%;
-                    gap: 20px;
-                    justify-content: space-between;
-                    .prices{
-                        display: flex;
-                        gap: 10px;
-                        align-items: center;
-                        span{
-                            color: #fff;
-                        }
-                        .discount-rate{
-                            font-size: 12px;
-                            padding: 2px 6px;
-                            border-radius: 4px;
+                        font-weight: 500;
+                        transition: 0.3s ease;
+                        &:hover{
                             background-color: #CD3D0F;
                         }
-                        .first-price{
-                            font-size: 16px;
-                            text-decoration: line-through;
-                            color:  #f5f5f599 ;
-                        }
-                        .last-price{
-                            font-size: 17px;
-                            font-weight: 400 ;
-                        }
-                    }
-                    .btnsDiv{
-                        display: flex;
-                        gap: 10px;
-                        button{
-                            border: 0;
-                            box-sizing: border-box;
-                            outline: 0;
-                            background-color: transparent;
-                            font-size: 14px;
-                            border-radius: 4px;
-                        }
-                        .addBtn{
-                            transition: 0.3s;
-                            font-weight: 500;
-                            color: #fff;
-                            padding:13px 20px ;
-                            border: 2px solid #fff;
-                            &:hover{
-                                border: 2px solid #CD3D0F;
-                                color: #CD3D0F;
-                            }
-                        }
-                        .removeBtn{
-                            transition: 0.3s;
-                            color:  #f5f5f599 ;
-                            font-size: 16px;
-                            text-decoration: underline;
-                            &:hover{
-                                color: #CD3D0F;
-                            }
-                        }
-
-
                     }
                 }
             }
         }
     }
 }
+
 
 
 
 
 
 footer {
-    padding:30px 0 29px 0;
+    padding: 30px 0 29px 0;
     background-color: #00080F;
 
     .footer-content {
@@ -325,17 +270,18 @@ footer {
 
 @media screen and (max-width:560px) {
     header {
-        .navbar-brand{
-            img{
+        .navbar-brand {
+            img {
                 width: 169px;
             }
         }
     }
 }
+
 @media screen and (max-width:991px) {
 
-    header{
-        .navbar-nav{
+    header {
+        .navbar-nav {
             padding-left: 0 !important;
             gap: 0;
         }
